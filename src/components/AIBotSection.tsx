@@ -40,10 +40,10 @@ const AIBotSection = () => {
 
           <div className="space-y-8">
             <div className="grid gap-6">
-              {features.map(({ icon: Icon, key }) => (
+              {features.map(({ icon, key }) => (
                 <div key={key} className="flex items-start space-x-4 group">
-                  <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center flex-shrink-0 group-hover:shadow-glow transition-all duration-300">
-                    <Icon className="w-6 h-6 text-primary-foreground" />
+                  <div className="w-12 h-12 flex items-center justify-center flex-shrink-0">
+                    <img src={icon} alt="" className="w-12 h-12 object-contain" />
                   </div>
                   <div className="space-y-2">
                     <h3 className="text-xl text-foreground group-hover:text-primary transition-colors duration-300 font-normal">
