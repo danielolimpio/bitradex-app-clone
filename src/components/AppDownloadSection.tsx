@@ -6,7 +6,7 @@ import videoAppSrc from "@/assets/video_app.mp4";
 const AppDownloadSection = () => {
   const { t } = useTranslation();
   return (
-    <section className="py-24 bg-[#0a0b0f] relative overflow-hidden">
+    <section className="py-24 bg-background relative overflow-hidden">
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-10 left-10 w-32 h-32 border border-primary rounded-full"></div>
         <div className="absolute bottom-10 right-10 w-48 h-48 border border-primary/50 rounded-full"></div>

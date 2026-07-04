@@ -1,19 +1,23 @@
 import { Button } from "@/components/ui/button";
-import { CheckCircle, ArrowRight, BarChart3, Target, Clock, Trophy } from "lucide-react";
+import { CheckCircle, ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import videoBotSrc from "@/assets/video_aibot.mp4";
+import oneClickIcon from "@/assets/ai-bot/one-click.svg";
+import aiStrategyIcon from "@/assets/ai-bot/ai-strategy.svg";
+import transparentIcon from "@/assets/ai-bot/transparent.svg";
+import riskIcon from "@/assets/ai-bot/risk.svg";
 
 const AIBotSection = () => {
   const { t } = useTranslation();
   const features = [
-    { icon: Target, key: "oneClick" },
-    { icon: BarChart3, key: "strategy" },
-    { icon: Clock, key: "transparent" },
-    { icon: Trophy, key: "risk" },
+    { icon: oneClickIcon, key: "oneClick" },
+    { icon: aiStrategyIcon, key: "strategy" },
+    { icon: transparentIcon, key: "transparent" },
+    { icon: riskIcon, key: "risk" },
   ];
 
   return (
-    <section className="py-24 bg-[#0a0b0f]">
+    <section className="py-24 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
           <div className="inline-block bg-gradient-primary text-primary-foreground px-6 py-2 rounded-full text-sm font-semibold mb-6">
@@ -36,10 +40,10 @@ const AIBotSection = () => {
 
           <div className="space-y-8">
             <div className="grid gap-6">
-              {features.map(({ icon: Icon, key }) => (
+              {features.map(({ icon, key }) => (
                 <div key={key} className="flex items-start space-x-4 group">
-                  <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center flex-shrink-0 group-hover:shadow-glow transition-all duration-300">
-                    <Icon className="w-6 h-6 text-primary-foreground" />
+                  <div className="w-12 h-12 flex items-center justify-center flex-shrink-0">
+                    <img src={icon} alt="" className="w-12 h-12 object-contain" />
                   </div>
                   <div className="space-y-2">
                     <h3 className="text-xl text-foreground group-hover:text-primary transition-colors duration-300 font-normal">
