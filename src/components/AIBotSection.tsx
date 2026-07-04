@@ -1,19 +1,23 @@
 import { Button } from "@/components/ui/button";
-import { CheckCircle, ArrowRight, BarChart3, Target, Clock, Trophy } from "lucide-react";
+import { CheckCircle, ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import videoBotSrc from "@/assets/video_aibot.mp4";
+import oneClickIcon from "@/assets/ai-bot/one-click.svg";
+import aiStrategyIcon from "@/assets/ai-bot/ai-strategy.svg";
+import transparentIcon from "@/assets/ai-bot/transparent.svg";
+import riskIcon from "@/assets/ai-bot/risk.svg";
 
 const AIBotSection = () => {
   const { t } = useTranslation();
   const features = [
-    { icon: Target, key: "oneClick" },
-    { icon: BarChart3, key: "strategy" },
-    { icon: Clock, key: "transparent" },
-    { icon: Trophy, key: "risk" },
+    { icon: oneClickIcon, key: "oneClick" },
+    { icon: aiStrategyIcon, key: "strategy" },
+    { icon: transparentIcon, key: "transparent" },
+    { icon: riskIcon, key: "risk" },
   ];
 
   return (
-    <section className="py-24 bg-[#0a0b0f]">
+    <section className="py-24 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
           <div className="inline-block bg-gradient-primary text-primary-foreground px-6 py-2 rounded-full text-sm font-semibold mb-6">
