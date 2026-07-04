@@ -1,14 +1,17 @@
 import { Button } from "@/components/ui/button";
-import { Smartphone, TrendingUp, BarChart3, Wallet } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import spotIcon from "@/assets/ecosystem/spot.svg";
+import futuresIcon from "@/assets/ecosystem/futures.svg";
+import aiBotIcon from "@/assets/ecosystem/aibot.svg";
+import btxCardIcon from "@/assets/ecosystem/btxcard.svg";
 
 const TradingEcosystem = () => {
   const { t } = useTranslation();
   const features = [
-    { icon: Smartphone, key: "spot" },
-    { icon: TrendingUp, key: "futures" },
-    { icon: BarChart3, key: "aiBot" },
-    { icon: Wallet, key: "btxCard" },
+    { icon: spotIcon, key: "spot" },
+    { icon: futuresIcon, key: "futures" },
+    { icon: aiBotIcon, key: "aiBot" },
+    { icon: btxCardIcon, key: "btxCard" },
   ];
 
   return (
@@ -24,10 +27,10 @@ const TradingEcosystem = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map(({ icon: Icon, key }) => (
+          {features.map(({ icon, key }) => (
             <div key={key} className="group relative bg-[#0f1114] border border-border/60 rounded-xl p-8 hover:border-primary/40 transition-all duration-300">
               <div className="mb-6">
-                <Icon className="w-10 h-10 text-foreground" strokeWidth={1.5} />
+                <img src={icon} alt="" className="w-12 h-12 object-contain" />
               </div>
 
               <div className="space-y-4 mb-6">
