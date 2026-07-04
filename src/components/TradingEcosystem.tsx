@@ -12,7 +12,7 @@ const TradingEcosystem = () => {
   ];
 
   return (
-    <section className="py-24 bg-bitradx-card">
+    <section className="py-24 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
@@ -25,11 +25,9 @@ const TradingEcosystem = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map(({ icon: Icon, key }) => (
-            <div key={key} className="group relative bg-gradient-card border border-border rounded-2xl p-8 hover:shadow-card transition-all duration-300 hover:-translate-y-1">
+            <div key={key} className="group relative bg-[#0f1114] border border-border/60 rounded-xl p-8 hover:border-primary/40 transition-all duration-300">
               <div className="mb-6">
-                <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
-                  <Icon className="w-8 h-8 text-primary-foreground" />
-                </div>
+                <Icon className="w-10 h-10 text-foreground" strokeWidth={1.5} />
               </div>
 
               <div className="space-y-4 mb-6">
