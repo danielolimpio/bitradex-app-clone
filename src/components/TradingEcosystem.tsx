@@ -27,10 +27,10 @@ const TradingEcosystem = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map(({ icon: Icon, key }) => (
+          {features.map(({ icon, key }) => (
             <div key={key} className="group relative bg-[#0f1114] border border-border/60 rounded-xl p-8 hover:border-primary/40 transition-all duration-300">
               <div className="mb-6">
-                <Icon className="w-10 h-10 text-foreground" strokeWidth={1.5} />
+                <img src={icon} alt="" className="w-12 h-12" />
               </div>
 
               <div className="space-y-4 mb-6">
