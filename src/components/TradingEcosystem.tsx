@@ -1,14 +1,17 @@
 import { Button } from "@/components/ui/button";
-import { Smartphone, TrendingUp, BarChart3, Wallet } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import spotIcon from "@/assets/ecosystem/spot.svg";
+import futuresIcon from "@/assets/ecosystem/futures.svg";
+import aiBotIcon from "@/assets/ecosystem/ai-bot.svg";
+import btxCardIcon from "@/assets/ecosystem/btx-card.svg";
 
 const TradingEcosystem = () => {
   const { t } = useTranslation();
   const features = [
-    { icon: Smartphone, key: "spot" },
-    { icon: TrendingUp, key: "futures" },
-    { icon: BarChart3, key: "aiBot" },
-    { icon: Wallet, key: "btxCard" },
+    { icon: spotIcon, key: "spot" },
+    { icon: futuresIcon, key: "futures" },
+    { icon: aiBotIcon, key: "aiBot" },
+    { icon: btxCardIcon, key: "btxCard" },
   ];
 
   return (
