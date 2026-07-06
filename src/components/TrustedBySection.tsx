@@ -47,14 +47,15 @@ const LogoRow = ({
         {track.map((partner, i) => (
           <div
             key={`${partner.name}-${i}`}
-            className="flex items-center justify-center h-24 md:h-28 w-56 md:w-64 flex-shrink-0 rounded-xl bg-[#1a1c20] border border-white/5"
+            className="flex items-center justify-center h-28 md:h-32 w-64 md:w-72 flex-shrink-0"
           >
             <img
               src={partner.logo}
               alt={partner.name}
-              className="max-h-10 md:max-h-12 w-auto object-contain opacity-80"
+              className="max-h-16 md:max-h-20 w-auto object-contain opacity-90"
             />
           </div>
+
         ))}
       </div>
     </div>
