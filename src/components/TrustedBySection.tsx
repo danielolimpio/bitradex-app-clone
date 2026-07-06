@@ -12,22 +12,57 @@ import certikLogo from "@/assets/partners/certik.png";
 import chaincatcherLogo from "@/assets/partners/chaincatcher.png";
 import rootdataLogo from "@/assets/partners/rootdata.png";
 
+const rowOne = [
+  { name: "Trustpilot", logo: trustpilotLogo },
+  { name: "Bitget", logo: bitgetLogo },
+  { name: "CoinMarketCap", logo: coinmarketcapLogo },
+  { name: "AVE.AI", logo: aveAiLogo },
+  { name: "Binance", logo: binanceLogo },
+  { name: "Token Pocket", logo: tokenPocketLogo },
+];
+
+const rowTwo = [
+  { name: "RootData", logo: rootdataLogo },
+  { name: "Tracxn", logo: tracxnLogo },
+  { name: "ODaily", logo: odailyLogo },
+  { name: "Chainalysis", logo: chainalysisLogo },
+  { name: "CertiK", logo: certikLogo },
+  { name: "ChainCatcher", logo: chaincatcherLogo },
+];
+
+const LogoRow = ({
+  items,
+  reverse = false,
+}: {
+  items: { name: string; logo: string }[];
+  reverse?: boolean;
+}) => {
+  // Duplicate enough times for a seamless marquee
+  const track = [...items, ...items, ...items, ...items];
+  return (
+    <div className="relative overflow-hidden">
+      <div
+        className={`flex gap-4 md:gap-6 w-max ${reverse ? "animate-marquee-reverse" : "animate-marquee"}`}
+      >
+        {track.map((partner, i) => (
+          <div
+            key={`${partner.name}-${i}`}
+            className="flex items-center justify-center h-24 md:h-28 w-56 md:w-64 flex-shrink-0 rounded-xl bg-[#1a1c20] border border-white/5"
+          >
+            <img
+              src={partner.logo}
+              alt={partner.name}
+              className="max-h-10 md:max-h-12 w-auto object-contain opacity-80"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const TrustedBySection = () => {
   const { t } = useTranslation();
-  const partners = [
-    { name: "AVE.AI", logo: aveAiLogo },
-    { name: "Binance", logo: binanceLogo },
-    { name: "Token Pocket", logo: tokenPocketLogo },
-    { name: "Trustpilot", logo: trustpilotLogo },
-    { name: "Bitget", logo: bitgetLogo },
-    { name: "CoinMarketCap", logo: coinmarketcapLogo },
-    { name: "Tracxn", logo: tracxnLogo },
-    { name: "ODaily", logo: odailyLogo },
-    { name: "Chainalysis", logo: chainalysisLogo },
-    { name: "CertiK", logo: certikLogo },
-    { name: "ChainCatcher", logo: chaincatcherLogo },
-    { name: "RootData", logo: rootdataLogo },
-  ];
 
   return (
     <section className="py-24 bg-background">
@@ -40,19 +75,15 @@ const TrustedBySection = () => {
             {t("trustedBy.subtitle")}
           </p>
         </div>
+      </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12">
-          {partners.map((partner, index) => (
-            <div key={index} className="flex items-center justify-center group">
-              <img
-                src={partner.logo}
-                alt={partner.name}
-                className="max-h-16 md:max-h-20 w-auto object-contain filter brightness-75 opacity-70 group-hover:brightness-100 group-hover:opacity-100 transition-all duration-300 hover:scale-110"
-              />
-            </div>
-          ))}
-        </div>
+      {/* Full-width marquee rows */}
+      <div className="space-y-4 md:space-y-6">
+        <LogoRow items={rowOne} />
+        <LogoRow items={rowTwo} reverse />
+      </div>
 
+      <div className="container mx-auto px-4 lg:px-8">
         <div className="mt-20 bg-gradient-card border border-border rounded-2xl p-12">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div className="space-y-2">
