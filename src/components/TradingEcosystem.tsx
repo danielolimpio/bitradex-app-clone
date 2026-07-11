@@ -61,7 +61,7 @@ const TradingEcosystem = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <div className="flex flex-col items-center">
-                <Button size="lg" className="bg-gradient-primary hover:shadow-button transition-all duration-300 text-lg px-8 py-6" onClick={() => window.open("https://www.bitradex.com/en/account/register?inviteCode=7UII2W", "_blank")}>
+                <Button size="lg" className="bg-gradient-primary hover:shadow-button transition-all duration-300 text-lg px-8 py-6" onClick={() => window.open("https://www.bitradex.ai/pt-br/account/register?inviteCode=7UII2W", "_blank")}>
                   {t("ecosystem.createAccount")}
                 </Button>
                 <p className="text-xs text-muted-foreground mt-1">{t("common.signupMobile")}</p>
