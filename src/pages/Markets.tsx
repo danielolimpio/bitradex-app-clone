@@ -152,7 +152,7 @@ const Markets = () => {
                       <td className="text-right py-4 px-4 text-foreground">{item.volume}</td>
                       <td className="text-right py-4 px-4 text-foreground">{item.vol24h}</td>
                       <td className="text-center py-4 px-4">
-                        <button onClick={() => window.open("https://www.bitradex.com/en/account/register?inviteCode=7UII2W", "_blank")} className="bg-gradient-primary hover:shadow-button px-6 py-2 rounded-md font-medium transition-all duration-300">
+                        <button onClick={() => window.open("https://www.bitradex.ai/pt-br/account/register?inviteCode=7UII2W", "_blank")} className="bg-gradient-primary hover:shadow-button px-6 py-2 rounded-md font-medium transition-all duration-300">
                           {t("markets.table.trade")}
                         </button>
                       </td>

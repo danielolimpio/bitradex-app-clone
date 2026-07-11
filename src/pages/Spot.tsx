@@ -93,7 +93,7 @@ const Spot = () => {
               <div className="text-center py-12 text-muted-foreground">
                 <div className="mb-2">📂</div>
                 <div>{t("spot.noOpenOrders")}</div>
-                <button onClick={() => window.open("https://www.bitradex.com/en/account/register?inviteCode=7UII2W", "_blank")} className="mt-4 bg-gradient-primary hover:shadow-button px-6 py-2 rounded-md font-medium transition-all duration-300">
+                <button onClick={() => window.open("https://www.bitradex.ai/pt-br/account/register?inviteCode=7UII2W", "_blank")} className="mt-4 bg-gradient-primary hover:shadow-button px-6 py-2 rounded-md font-medium transition-all duration-300">
                   {t("spot.startTrading")}
                 </button>
                 <p className="text-xs text-muted-foreground mt-2">{t("common.signupMobile")}</p>
@@ -177,7 +177,7 @@ const Spot = () => {
                   <div className="flex justify-between"><span>{t("common.total")}:</span><span className="text-foreground">0.0000 USDT</span></div>
                 </div>
 
-                <button onClick={() => window.open("https://www.bitradex.com/en/account/register?inviteCode=7UII2W", "_blank")} className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded font-medium transition-colors">
+                <button onClick={() => window.open("https://www.bitradex.ai/pt-br/account/register?inviteCode=7UII2W", "_blank")} className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded font-medium transition-colors">
                   {t("spot.buyBTC")}
                 </button>
                 <p className="text-xs text-center text-muted-foreground">{t("common.signupMobile")}</p>
