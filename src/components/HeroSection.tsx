@@ -32,16 +32,14 @@ const HeroSection = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <div className="flex flex-col">
-                <Button
-                  size="lg"
-                  className="bg-gradient-primary hover:shadow-button transition-all duration-300 text-base px-8 py-6 rounded-md"
-                  onClick={() => window.open('https://www.bitradex.com/en/account/register?inviteCode=7UII2W', '_blank')}
-                >
-                  {t("hero.registerNow")}
-                </Button>
-                <p className="text-xs text-muted-foreground mt-1">{t("common.signupMobile")}</p>
-              </div>
+              <Button
+                size="lg"
+                className="bg-gradient-primary hover:shadow-button transition-all duration-300 text-base px-8 py-6 rounded-md"
+                onClick={() => window.open('https://www.bitradex.ai/pt-br/account/register?inviteCode=7UII2W', '_blank')}
+              >
+                {t("hero.registerNow")}
+              </Button>
+
 
               <Button size="lg" variant="outline" className="border-primary/50 text-primary hover:bg-primary/10 transition-all duration-300 text-base px-8 py-6">
                 <Play className="w-5 h-5 mr-2" />

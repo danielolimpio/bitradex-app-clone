@@ -162,7 +162,7 @@ const AboutUs = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-8">{t("aboutUs.moreTitle")}</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">{t("aboutUs.moreText")}</p>
           <div className="flex flex-col items-center">
-            <Button size="lg" onClick={() => window.open("https://www.bitradex.com/en/account/register?inviteCode=7UII2W", "_blank")}>
+            <Button size="lg" onClick={() => window.open("https://www.bitradex.ai/pt-br/account/register?inviteCode=7UII2W", "_blank")}>
               {t("aboutUs.ctaButton")}
             </Button>
             <p className="text-xs text-muted-foreground mt-2">{t("common.signupMobile")}</p>

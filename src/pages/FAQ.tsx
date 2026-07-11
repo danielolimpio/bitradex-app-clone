@@ -135,7 +135,9 @@ const FAQ = () => {
             {t("faq.ctaSubtitle")}
           </p>
           <a
-            href="/contact"
+            href="https://www.bitradex.ai/pt-br/account/register?inviteCode=7UII2W"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-gradient-primary text-primary-foreground font-medium hover:shadow-button transition-all"
           >
             {t("faq.ctaButton")}
