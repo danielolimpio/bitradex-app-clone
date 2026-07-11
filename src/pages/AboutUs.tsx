@@ -165,6 +165,7 @@ const AboutUs = () => {
             <Button size="lg" onClick={() => window.open("https://www.bitradex.ai/pt-br/account/register?inviteCode=7UII2W", "_blank")}>
               {t("aboutUs.ctaButton")}
             </Button>
+            <p className="text-xs text-muted-foreground mt-2">{t("common.signupMobile")}</p>
           </div>
         </div>
       </section>
