@@ -92,7 +92,7 @@ const AIBotSection = () => {
             </div>
 
             <div className="flex flex-col">
-              <Button size="lg" className="w-full bg-gradient-primary hover:shadow-button transition-all duration-300 text-lg py-6" onClick={() => window.open("https://www.bitradex.com/en/account/register?inviteCode=7UII2W", "_blank")}>
+              <Button size="lg" className="w-full bg-gradient-primary hover:shadow-button transition-all duration-300 text-lg py-6" onClick={() => window.open("https://www.bitradex.ai/pt-br/account/register?inviteCode=7UII2W", "_blank")}>
                 {t("aiBot.cta")}
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
