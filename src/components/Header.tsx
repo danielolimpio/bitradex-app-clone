@@ -47,7 +47,7 @@ const Header = () => {
             <LanguageSelector />
             <Button 
               variant="ghost" 
-              className="text-muted-foreground hover:text-primary"
+              className="text-muted-foreground hover:text-white hover:bg-transparent"
               onClick={() => window.open('https://www.bitradex.com/en/account/register?inviteCode=7UII2W', '_blank')}
             >
               {t("nav.login")}
