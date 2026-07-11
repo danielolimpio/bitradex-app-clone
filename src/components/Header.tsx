@@ -52,15 +52,13 @@ const Header = () => {
             >
               {t("nav.login")}
             </Button>
-            <div className="flex flex-col items-center">
-              <Button 
-                className="bg-gradient-primary hover:shadow-button transition-all duration-300"
-                onClick={() => window.open('https://www.bitradex.com/en/account/register?inviteCode=7UII2W', '_blank')}
-              >
-                {t("nav.signup")}
-              </Button>
-              <p className="text-xs text-muted-foreground mt-1">{t("nav.signupMobile")}</p>
-            </div>
+            <Button
+              className="bg-gradient-primary hover:shadow-button transition-all duration-300"
+              onClick={() => window.open('https://www.bitradex.com/en/account/register?inviteCode=7UII2W', '_blank')}
+            >
+              {t("nav.signup")}
+            </Button>
+
           </div>
 
           {/* Mobile Menu Button */}
@@ -95,15 +93,13 @@ const Header = () => {
                 >
                   {t("nav.login")}
                 </Button>
-                <div>
-                  <Button 
-                    className="bg-gradient-primary justify-start w-full"
-                    onClick={() => window.open('https://www.bitradex.com/en/account/register?inviteCode=7UII2W', '_blank')}
-                  >
-                    {t("nav.signup")}
-                  </Button>
-                  <p className="text-xs text-muted-foreground mt-1">{t("nav.signupMobile")}</p>
-                </div>
+                <Button
+                  className="bg-gradient-primary justify-start w-full"
+                  onClick={() => window.open('https://www.bitradex.com/en/account/register?inviteCode=7UII2W', '_blank')}
+                >
+                  {t("nav.signup")}
+                </Button>
+
               </div>
             </nav>
           </div>
