@@ -48,13 +48,13 @@ const Header = () => {
             <Button 
               variant="ghost" 
               className="text-muted-foreground hover:text-white hover:bg-transparent"
-              onClick={() => window.open('https://www.bitradex.com/en/account/register?inviteCode=7UII2W', '_blank')}
+              onClick={() => window.open('https://www.bitradex.ai/pt-br/account/register?inviteCode=7UII2W', '_blank')}
             >
               {t("nav.login")}
             </Button>
             <Button
               className="bg-gradient-primary hover:shadow-button transition-all duration-300"
-              onClick={() => window.open('https://www.bitradex.com/en/account/register?inviteCode=7UII2W', '_blank')}
+              onClick={() => window.open('https://www.bitradex.ai/pt-br/account/register?inviteCode=7UII2W', '_blank')}
             >
               {t("nav.signup")}
             </Button>
@@ -89,13 +89,13 @@ const Header = () => {
                 <Button
                   variant="ghost"
                   className="justify-start text-muted-foreground hover:text-white hover:bg-transparent"
-                  onClick={() => window.open('https://www.bitradex.com/en/account/register?inviteCode=7UII2W', '_blank')}
+                  onClick={() => window.open('https://www.bitradex.ai/pt-br/account/register?inviteCode=7UII2W', '_blank')}
                 >
                   {t("nav.login")}
                 </Button>
                 <Button
                   className="bg-gradient-primary justify-start w-full"
-                  onClick={() => window.open('https://www.bitradex.com/en/account/register?inviteCode=7UII2W', '_blank')}
+                  onClick={() => window.open('https://www.bitradex.ai/pt-br/account/register?inviteCode=7UII2W', '_blank')}
                 >
                   {t("nav.signup")}
                 </Button>

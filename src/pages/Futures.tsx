@@ -87,7 +87,7 @@ const Futures = () => {
               <div className="text-center py-12 text-muted-foreground">
                 <div className="mb-2">📂</div>
                 <div>{t("futures.noData")}</div>
-                <button onClick={() => window.open("https://www.bitradex.com/en/account/register?inviteCode=7UII2W", "_blank")} className="mt-4 bg-gradient-primary hover:shadow-button px-6 py-2 rounded-md font-medium transition-all duration-300">
+                <button onClick={() => window.open("https://www.bitradex.ai/pt-br/account/register?inviteCode=7UII2W", "_blank")} className="mt-4 bg-gradient-primary hover:shadow-button px-6 py-2 rounded-md font-medium transition-all duration-300">
                   {t("futures.openPosition")}
                 </button>
                 <p className="text-xs text-muted-foreground mt-2">{t("common.signupMobile")}</p>
@@ -135,10 +135,10 @@ const Futures = () => {
                 </div>
 
                 <div className="grid grid-cols-2 gap-2">
-                  <button onClick={() => window.open("https://www.bitradex.com/en/account/register?inviteCode=7UII2W", "_blank")} className="bg-green-600 hover:bg-green-700 text-white py-3 rounded font-medium transition-colors">
+                  <button onClick={() => window.open("https://www.bitradex.ai/pt-br/account/register?inviteCode=7UII2W", "_blank")} className="bg-green-600 hover:bg-green-700 text-white py-3 rounded font-medium transition-colors">
                     {t("futures.openLong")}
                   </button>
-                  <button onClick={() => window.open("https://www.bitradex.com/en/account/register?inviteCode=7UII2W", "_blank")} className="bg-red-600 hover:bg-red-700 text-white py-3 rounded font-medium transition-colors">
+                  <button onClick={() => window.open("https://www.bitradex.ai/pt-br/account/register?inviteCode=7UII2W", "_blank")} className="bg-red-600 hover:bg-red-700 text-white py-3 rounded font-medium transition-colors">
                     {t("futures.openShort")}
                   </button>
                 </div>
@@ -154,7 +154,7 @@ const Futures = () => {
               </div>
 
               <div className="grid grid-cols-2 gap-2 mt-4">
-                <button onClick={() => window.open("https://www.bitradex.com/en/account/register?inviteCode=7UII2W", "_blank")} className="bg-gradient-primary hover:shadow-button py-2 rounded text-sm font-medium transition-all duration-300">
+                <button onClick={() => window.open("https://www.bitradex.ai/pt-br/account/register?inviteCode=7UII2W", "_blank")} className="bg-gradient-primary hover:shadow-button py-2 rounded text-sm font-medium transition-all duration-300">
                   {t("common.deposit")}
                 </button>
                 <button className="bg-muted hover:bg-muted/80 py-2 rounded text-sm font-medium transition-colors">{t("common.transfer")}</button>

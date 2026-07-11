@@ -56,7 +56,7 @@ const Institutional = () => {
             </div>
 
             <div className="flex flex-col items-center gap-4">
-              <Button size="lg" onClick={() => window.open("https://www.bitradex.com/en/account/register?inviteCode=7UII2W", "_blank")}>
+              <Button size="lg" onClick={() => window.open("https://www.bitradex.ai/pt-br/account/register?inviteCode=7UII2W", "_blank")}>
                 {t("institutional.contactTeam")}
               </Button>
               <p className="text-xs text-muted-foreground">{t("institutional.getStartedHelp")}</p>
@@ -180,7 +180,7 @@ const Institutional = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("institutional.ctaTitle")}</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">{t("institutional.ctaSubtitle")}</p>
           <div className="flex flex-col items-center gap-4">
-            <Button size="lg" onClick={() => window.open("https://www.bitradex.com/en/account/register?inviteCode=7UII2W", "_blank")}>
+            <Button size="lg" onClick={() => window.open("https://www.bitradex.ai/pt-br/account/register?inviteCode=7UII2W", "_blank")}>
               {t("institutional.scheduleConsultation")}
             </Button>
             <p className="text-xs text-muted-foreground">{t("institutional.contactSales")}</p>
