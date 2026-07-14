@@ -1,0 +1,25 @@
+# Bitradex Brasil
+
+> Portal em português da Bitradex — plataforma de negociação de criptomoedas com Inteligência Artificial. Tutoriais, código de convite, guia do AI Bot e informações sobre o embaixador global David Villa.
+
+Bitradex (BITRADEX FINTECH LIMITED) é uma exchange de criptomoedas com foco em trading automatizado por IA. O site bitradex.app é o portal brasileiro/multilíngue com tutoriais, guias de cadastro, informações sobre AI Bot, spot, futuros, BTX Token e o embaixador global David Villa.
+
+## Pages
+- [Home](/): Visão geral, AI Bot, ecossistema, David Villa
+- [Sobre](/about-us): História e missão
+- [Mercados](/markets): Cotações em tempo real
+- [Spot](/spot): Trading spot com TradingView
+- [Futuros](/futures): Perpétuos
+- [Institucional](/institutional): Serviços institucionais
+- [FAQ](/faq): Perguntas frequentes
+- [Contato](/contact): WhatsApp e email
+- [Nossa Equipe](/our-team)
+- [Carreiras](/careers)
+- [Imprensa](/press-media)
+
+## Legal
+- [Termos](/terms-of-service)
+- [Privacidade](/privacy-policy)
+- [Risk Disclosure](/risk-disclosure)
+- [AML](/aml-policy)
+- [Compliance](/compliance)
