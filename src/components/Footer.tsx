@@ -24,7 +24,7 @@ const Footer = () => {
       links: [
         { text: t("footer.links.spotTrading"), href: "/spot" },
         { text: t("footer.links.futuresTrading"), href: "/futures" },
-        { text: t("footer.links.aiBot"), href: "#" },
+        { text: "AI Bot", href: "/#ai-bot" },
         { text: t("footer.links.apiDocs"), href: "#" },
         { text: t("footer.links.mobileApp"), href: "#" },
       ],
@@ -33,20 +33,20 @@ const Footer = () => {
       title: t("footer.sections.services"),
       links: [
         { text: t("footer.links.institutional"), href: "/institutional" },
-        { text: t("footer.links.vipProgram"), href: "#" },
-        { text: t("footer.links.referral"), href: "#" },
-        { text: t("footer.links.security"), href: "#" },
-        { text: t("footer.links.supportCenter"), href: "#" },
+        { text: "VIP Program", href: "/vip" },
+        { text: "Referral Program", href: "/referral" },
+        { text: "Security", href: "/security" },
+        { text: "Support Center", href: "/support-center" },
       ],
     },
     {
       title: t("footer.sections.support"),
       links: [
-        { text: t("footer.links.helpCenter"), href: "#" },
+        { text: "Help Center", href: "/help-center" },
         { text: t("footer.links.faq"), href: "/faq" },
-        { text: t("footer.links.tradingGuide"), href: "#" },
-        { text: t("footer.links.apiDocs"), href: "#" },
-        { text: t("footer.links.systemStatus"), href: "#" },
+        { text: "Trading Guide", href: "/trading-guide" },
+        { text: "Blog", href: "/blog" },
+        { text: "System Status", href: "/system-status" },
       ],
     },
   ];
