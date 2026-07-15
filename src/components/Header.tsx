@@ -2,10 +2,17 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/bitradex-logo.png";
 import LanguageSelector from "@/components/LanguageSelector";
 
+const SUPPORTED_LANGS = ["pt", "es", "de", "id", "th", "ko", "ru", "ja", "ms", "zh"];
+
 const Header = () => {
+  const location = useLocation();
+  const first = location.pathname.split("/")[1];
+  const langPrefix = SUPPORTED_LANGS.includes(first) ? `/${first}` : "";
+  const withLang = (p: string) => (p === "/" ? langPrefix || "/" : `${langPrefix}${p}`);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t } = useTranslation();
 
@@ -32,13 +39,13 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
-                href={item.href}
+                to={withLang(item.href)}
                 className="text-muted-foreground hover:text-primary transition-colors duration-200"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -75,14 +82,14 @@ const Header = () => {
           <div className="md:hidden py-4 border-t border-border">
             <nav className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.label}
-                  href={item.href}
+                  to={withLang(item.href)}
                   className="text-muted-foreground hover:text-primary transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
               <div className="flex flex-col space-y-2 pt-4">
                 <LanguageSelector />
