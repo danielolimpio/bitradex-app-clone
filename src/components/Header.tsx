@@ -2,10 +2,17 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/bitradex-logo.png";
 import LanguageSelector from "@/components/LanguageSelector";
 
+const SUPPORTED_LANGS = ["pt", "es", "de", "id", "th", "ko", "ru", "ja", "ms", "zh"];
+
 const Header = () => {
+  const location = useLocation();
+  const first = location.pathname.split("/")[1];
+  const langPrefix = SUPPORTED_LANGS.includes(first) ? `/${first}` : "";
+  const withLang = (p: string) => (p === "/" ? langPrefix || "/" : `${langPrefix}${p}`);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t } = useTranslation();
 
