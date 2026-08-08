@@ -7,6 +7,7 @@ import logo from "@/assets/bitradex-logo.png";
 import LanguageSelector from "@/components/LanguageSelector";
 
 const SUPPORTED_LANGS = ["pt", "es", "de", "id", "th", "ko", "ru", "ja", "ms", "zh"];
+const INVITE_URL = "https://www.bitradex.ai/pt-br/account/register?inviteCode=7UII2W";
 
 const Header = () => {
   const location = useLocation();
@@ -27,22 +28,25 @@ const Header = () => {
     { label: t("nav.contactUs"), href: "/contact" },
   ];
 
+  const isActive = (href: string) => withLang(href) === location.pathname;
+
   return (
-    <header className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
+    <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-xl">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-[72px]">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <img src={logo} alt="Bitradex" className="h-8 w-auto" />
-          </div>
+          <Link to={withLang("/")} className="flex items-center" aria-label="Bitradex">
+            <img src={logo} alt="Bitradex" className="h-9 w-auto" />
+          </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center gap-7">
             {navItems.map((item) => (
               <Link
                 key={item.label}
                 to={withLang(item.href)}
-                className="text-muted-foreground hover:text-primary transition-colors duration-200"
+                data-active={isActive(item.href)}
+                className="nav-link text-[0.975rem] font-medium text-muted-foreground hover:text-foreground data-[active=true]:text-foreground transition-colors duration-200"
               >
                 {item.label}
               </Link>
@@ -50,68 +54,60 @@ const Header = () => {
           </nav>
 
           {/* Auth Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center gap-3">
             <LanguageSelector />
-            <Button 
-              variant="ghost" 
-              className="text-muted-foreground hover:text-white hover:bg-transparent"
-              onClick={() => window.open('https://www.bitradex.ai/pt-br/account/register?inviteCode=7UII2W', '_blank')}
+            <Button
+              variant="ghost"
+              className="text-muted-foreground hover:text-primary"
+              onClick={() => window.open(INVITE_URL, "_blank")}
             >
               {t("nav.login")}
             </Button>
-            <Button
-              className="bg-gradient-primary hover:shadow-button transition-all duration-300"
-              onClick={() => window.open('https://www.bitradex.ai/pt-br/account/register?inviteCode=7UII2W', '_blank')}
-            >
+            <Button variant="gradient" onClick={() => window.open(INVITE_URL, "_blank")}>
               {t("nav.signup")}
             </Button>
-
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground"
+            className="lg:hidden flex items-center justify-center w-11 h-11 rounded-xl border border-border bg-secondary/40 text-foreground"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border">
-            <nav className="flex flex-col space-y-4">
+          <div className="lg:hidden pb-6 pt-2">
+            <nav className="premium-panel p-4 flex flex-col">
               {navItems.map((item) => (
                 <Link
                   key={item.label}
                   to={withLang(item.href)}
-                  className="text-muted-foreground hover:text-primary transition-colors duration-200"
+                  data-active={isActive(item.href)}
+                  className="py-3 px-3 rounded-xl text-base font-medium text-muted-foreground hover:text-foreground hover:bg-secondary/60 data-[active=true]:text-primary transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
                 </Link>
               ))}
-              <div className="flex flex-col space-y-2 pt-4">
+              <hr className="divider-premium my-4" />
+              <div className="flex flex-col gap-3">
                 <LanguageSelector />
-                <Button
-                  variant="ghost"
-                  className="justify-start text-muted-foreground hover:text-white hover:bg-transparent"
-                  onClick={() => window.open('https://www.bitradex.ai/pt-br/account/register?inviteCode=7UII2W', '_blank')}
-                >
+                <Button variant="outline" onClick={() => window.open(INVITE_URL, "_blank")}>
                   {t("nav.login")}
                 </Button>
-                <Button
-                  className="bg-gradient-primary justify-start w-full"
-                  onClick={() => window.open('https://www.bitradex.ai/pt-br/account/register?inviteCode=7UII2W', '_blank')}
-                >
+                <Button variant="gradient" className="w-full" onClick={() => window.open(INVITE_URL, "_blank")}>
                   {t("nav.signup")}
                 </Button>
-
               </div>
             </nav>
           </div>
         )}
       </div>
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-border to-transparent" />
     </header>
   );
 };
