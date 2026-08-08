@@ -25,7 +25,7 @@ All colors MUST be HSL.
     --secondary-foreground: 0 0% 100%;
 
     --muted: 210 4% 14%;
-    --muted-foreground: 210 5% 55%;
+    --muted-foreground: 210 6% 68%;
 
     --accent: 195 100% 50%;
     --accent-foreground: 210 5% 8%;
@@ -33,11 +33,11 @@ All colors MUST be HSL.
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 5% 18%;
+    --border: 210 6% 20%;
     --input: 210 4% 14%;
     --ring: 195 100% 50%;
 
-    --radius: 0.75rem;
+    --radius: 0.875rem;
 
     /* BitradX Custom Colors */
     --bitradx-blue: 195 100% 50%;
@@ -48,10 +48,19 @@ All colors MUST be HSL.
     --bitradx-card: 210 5% 11%;
     --bitradx-accent: 195 80% 60%;
 
+    /* Premium accents */
+    --gold: 42 72% 62%;
+    --surface: 214 7% 12%;
+    --surface-2: 214 7% 15%;
+    --hairline: 0 0% 100%;
+
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(195 100% 50%), hsl(195 80% 60%));
+    --gradient-primary: linear-gradient(135deg, hsl(195 100% 52%), hsl(200 92% 62%));
     --gradient-hero: linear-gradient(135deg, hsl(210 5% 8%), hsl(210 5% 11%));
-    --gradient-card: linear-gradient(135deg, hsl(210 5% 11%), hsl(210 5% 14%));
+    --gradient-card: linear-gradient(160deg, hsl(214 7% 13.5%), hsl(214 8% 10.5%));
+    --gradient-sheen: linear-gradient(100deg, transparent 20%, hsl(0 0% 100% / 0.06) 45%, transparent 70%);
+    --gradient-gold: linear-gradient(135deg, hsl(42 78% 70%), hsl(36 60% 48%));
+    --gradient-halo: radial-gradient(60% 60% at 50% 0%, hsl(195 100% 50% / 0.16), transparent 70%);
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -59,16 +68,17 @@ All colors MUST be HSL.
 
     /* Shadows */
     --shadow-glow: 0 0 40px hsl(195 100% 50% / 0.3);
-    --shadow-card: 0 10px 30px hsl(210 5% 8% / 0.5);
-    --shadow-button: 0 5px 15px hsl(195 100% 50% / 0.4);
+    --shadow-card: 0 1px 0 0 hsl(0 0% 100% / 0.05) inset, 0 18px 40px -24px hsl(0 0% 0% / 0.8);
+    --shadow-elevated: 0 1px 0 0 hsl(0 0% 100% / 0.07) inset, 0 30px 60px -30px hsl(0 0% 0% / 0.9);
+    --shadow-button: 0 8px 24px -8px hsl(195 100% 50% / 0.55);
 
-    --sidebar-background: 210 5% 11%;
+    --sidebar-background: 214 7% 12%;
     --sidebar-foreground: 0 0% 100%;
     --sidebar-primary: 195 100% 50%;
     --sidebar-primary-foreground: 210 5% 8%;
     --sidebar-accent: 210 4% 14%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 210 5% 18%;
+    --sidebar-border: 210 6% 20%;
     --sidebar-ring: 195 100% 50%;
   }
 
@@ -85,12 +95,12 @@ All colors MUST be HSL.
     --secondary: 210 4% 14%;
     --secondary-foreground: 0 0% 100%;
     --muted: 210 4% 14%;
-    --muted-foreground: 210 5% 55%;
+    --muted-foreground: 210 6% 68%;
     --accent: 195 100% 50%;
     --accent-foreground: 210 5% 8%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
-    --border: 210 5% 18%;
+    --border: 210 6% 20%;
     --input: 210 4% 14%;
     --ring: 195 100% 50%;
   }
@@ -101,30 +111,47 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+    /* Larger, senior-friendly base type */
+    font-size: 17px;
+  }
+
   body {
     @apply bg-background text-foreground;
-    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+    font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
     font-weight: 400;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    letter-spacing: 0.005em;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
     font-size: inherit;
     font-weight: inherit;
+    letter-spacing: -0.02em;
   }
 
   p {
-    font-weight: 300;
+    font-weight: 400;
   }
 
+  ::selection {
+    background: hsl(var(--primary) / 0.28);
+    color: hsl(var(--foreground));
+  }
 
-  html {
-    scroll-behavior: smooth;
+  :focus-visible {
+    outline: 2px solid hsl(var(--primary) / 0.7);
+    outline-offset: 2px;
   }
 
   /* Custom scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 10px;
   }
 
   ::-webkit-scrollbar-track {
@@ -132,11 +159,269 @@ All colors MUST be HSL.
   }
 
   ::-webkit-scrollbar-thumb {
-    background: hsl(var(--primary));
-    border-radius: 4px;
+    background: linear-gradient(hsl(var(--primary)), hsl(200 92% 45%));
+    border-radius: 10px;
+    border: 2px solid hsl(var(--background));
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: hsl(var(--primary) / 0.8);
+    background: hsl(var(--primary) / 0.85);
+  }
+}
+
+@layer components {
+  /* ---------- Premium surfaces ---------- */
+  .premium-card {
+    position: relative;
+    border-radius: 1.25rem;
+    background: var(--gradient-card);
+    border: 1px solid hsl(var(--hairline) / 0.07);
+    box-shadow: var(--shadow-card);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
+  }
+
+  .premium-card:hover {
+    transform: translateY(-3px);
+    border-color: hsl(var(--primary) / 0.35);
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .premium-panel {
+    border-radius: 1.25rem;
+    background: linear-gradient(160deg, hsl(var(--surface) / 0.9), hsl(var(--background) / 0.9));
+    border: 1px solid hsl(var(--hairline) / 0.07);
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Thin luminous top hairline used across premium blocks */
+  .hairline-top::before {
+    content: "";
+    position: absolute;
+    inset: 0 12% auto 12%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.55), transparent);
+  }
+
+  .divider-premium {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--hairline) / 0.14), transparent);
+    border: 0;
+  }
+
+  /* ---------- Badges & chips ---------- */
+  .badge-premium {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: hsl(var(--primary));
+    background: hsl(var(--primary) / 0.1);
+    border: 1px solid hsl(var(--primary) / 0.3);
+    box-shadow: 0 0 0 1px hsl(var(--background)) inset;
+  }
+
+  .badge-gold {
+    color: hsl(38 45% 12%);
+    background: var(--gradient-gold);
+    border: 1px solid hsl(var(--gold) / 0.6);
+  }
+
+  .chip-category {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: hsl(var(--muted-foreground));
+    background: hsl(var(--surface));
+    border: 1px solid hsl(var(--hairline) / 0.08);
+    transition: var(--transition-smooth);
+  }
+
+  .chip-category:hover,
+  .chip-category[data-active="true"] {
+    color: hsl(var(--primary-foreground));
+    background: var(--gradient-primary);
+    border-color: transparent;
+    box-shadow: var(--shadow-button);
+  }
+
+  /* ---------- Text treatments ---------- */
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .eyebrow {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: hsl(var(--primary));
+  }
+
+  /* ---------- Premium article typography ---------- */
+  .prose-premium {
+    font-size: 1.125rem;
+    line-height: 1.85;
+    color: hsl(var(--muted-foreground));
+  }
+
+  .prose-premium h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: hsl(var(--foreground));
+    margin: 2.75rem 0 1rem;
+    line-height: 1.25;
+  }
+
+  .prose-premium h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: hsl(var(--foreground));
+    margin: 2rem 0 0.75rem;
+  }
+
+  .prose-premium p {
+    margin-bottom: 1.25rem;
+  }
+
+  .prose-premium a {
+    color: hsl(var(--primary));
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+  }
+
+  .prose-premium strong {
+    color: hsl(var(--foreground));
+    font-weight: 700;
+  }
+
+  .prose-premium mark,
+  .mark-premium {
+    background: linear-gradient(180deg, transparent 55%, hsl(var(--primary) / 0.28) 55%);
+    color: hsl(var(--foreground));
+    padding: 0 0.15em;
+    border-radius: 2px;
+  }
+
+  .prose-premium ul {
+    list-style: none;
+    margin: 1.25rem 0;
+    padding: 0;
+  }
+
+  .prose-premium ul li {
+    position: relative;
+    padding-left: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .prose-premium ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.7em;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 2px;
+    background: var(--gradient-primary);
+    box-shadow: 0 0 10px hsl(var(--primary) / 0.6);
+  }
+
+  .prose-premium blockquote {
+    margin: 2rem 0;
+    padding: 1.25rem 1.5rem;
+    border-left: 3px solid hsl(var(--primary));
+    border-radius: 0 1rem 1rem 0;
+    background: linear-gradient(90deg, hsl(var(--primary) / 0.08), transparent);
+    color: hsl(var(--foreground));
+    font-size: 1.15rem;
+  }
+
+  /* Premium tables */
+  .table-premium {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 2rem 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid hsl(var(--hairline) / 0.08);
+    font-size: 1rem;
+  }
+
+  .table-premium thead th {
+    font-family: 'Outfit', sans-serif;
+    text-align: left;
+    padding: 0.9rem 1.1rem;
+    background: hsl(var(--surface-2));
+    color: hsl(var(--foreground));
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    border-bottom: 1px solid hsl(var(--hairline) / 0.1);
+  }
+
+  .table-premium tbody td {
+    padding: 0.85rem 1.1rem;
+    border-bottom: 1px solid hsl(var(--hairline) / 0.06);
+    color: hsl(var(--muted-foreground));
+  }
+
+  .table-premium tbody tr:last-child td {
+    border-bottom: 0;
+  }
+
+  .table-premium tbody tr:nth-child(even) td {
+    background: hsl(var(--hairline) / 0.02);
+  }
+
+  /* Highlight callout box */
+  .callout-premium {
+    position: relative;
+    margin: 2rem 0;
+    padding: 1.5rem 1.75rem;
+    border-radius: 1.25rem;
+    background: linear-gradient(150deg, hsl(var(--primary) / 0.1), transparent 65%);
+    border: 1px solid hsl(var(--primary) / 0.28);
+    color: hsl(var(--foreground));
+  }
+
+  /* Nav underline indicator */
+  .nav-link {
+    position: relative;
+    padding-bottom: 2px;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+  }
+
+  .nav-link:hover::after,
+  .nav-link[data-active="true"]::after {
+    transform: scaleX(1);
   }
 }

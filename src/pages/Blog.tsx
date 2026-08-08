@@ -64,10 +64,14 @@ const posts = [
   },
 ];
 
+const categories = ["Todos", ...Array.from(new Set(posts.map((p) => p.category)))];
+
 const Blog = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const [featured, ...rest] = posts;
 
   return (
     <div className="min-h-screen bg-background">
@@ -75,49 +79,76 @@ const Blog = () => {
       <Header />
       <main>
         {/* Hero */}
-        <section className="relative overflow-hidden border-b border-border">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-background" />
-          <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px]" />
-          <div className="relative container mx-auto px-4 lg:px-8 py-20 lg:py-28 text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 text-primary text-sm mb-6">
+        <section className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-[image:var(--gradient-halo)]" />
+          <div className="relative container mx-auto px-4 lg:px-8 py-20 lg:py-24 text-center">
+            {/* Breadcrumbs */}
+            <nav aria-label="Breadcrumb" className="flex justify-center mb-8">
+              <ol className="flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-secondary/40 text-sm">
+                <li>
+                  <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
+                    Home
+                  </Link>
+                </li>
+                <li className="text-border">/</li>
+                <li className="text-foreground font-medium">Blog</li>
+              </ol>
+            </nav>
+
+            <div className="badge-premium mb-6">
               <TrendingUp className="w-4 h-4" />
               Insights, Análises e Estratégias
             </div>
-            <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight">
-              Bitradex <span className="bg-gradient-primary bg-clip-text text-transparent">Blog</span>
+            <h1 className="font-display text-4xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight">
+              Bitradex <span className="text-gradient">Blog</span>
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light">
-              Conteúdo premium sobre trading de criptomoedas, IA, análise de mercado e as últimas novidades do mundo cripto.
+            <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto">
+              Conteúdo premium sobre trading de criptomoedas, IA, análise de mercado e as últimas novidades do mundo
+              cripto.
             </p>
+
+            {/* Categories */}
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+              {categories.map((c, i) => (
+                <span key={c} className="chip-category" data-active={i === 0}>
+                  {c}
+                </span>
+              ))}
+            </div>
           </div>
+          <div className="h-px w-full bg-gradient-to-r from-transparent via-border to-transparent" />
         </section>
 
         {/* Featured Post */}
-        <section className="container mx-auto px-4 lg:px-8 py-16">
-          <Link
-            to={`/blog/${posts[0].slug}`}
-            className="group block relative overflow-hidden rounded-3xl border border-border bg-card/30 hover:border-primary/50 transition-all duration-500"
-          >
-            <div className={`absolute inset-0 bg-gradient-to-br ${posts[0].gradient} opacity-60`} />
+        <section className="container mx-auto px-4 lg:px-8 py-14">
+          <Link to={`/blog/${featured.slug}`} className="group premium-card hairline-top block overflow-hidden">
+            <div className={`absolute inset-0 bg-gradient-to-br ${featured.gradient} opacity-50`} />
             <div className="relative grid lg:grid-cols-2 gap-8 p-8 lg:p-12">
               <div className="flex flex-col justify-center">
-                <span className="inline-block w-fit px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-medium mb-4">
-                  {posts[0].category} · Destaque
+                <span className="badge-gold w-fit mb-5 px-3 py-1 rounded-full text-sm font-semibold">
+                  {featured.category} · Destaque
                 </span>
-                <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
-                  {posts[0].title}
+                <h2 className="font-display text-3xl lg:text-4xl font-bold text-foreground mb-4 leading-tight group-hover:text-primary transition-colors">
+                  {featured.title}
                 </h2>
-                <p className="text-muted-foreground text-lg mb-6 font-light">{posts[0].excerpt}</p>
-                <div className="flex items-center gap-6 text-sm text-muted-foreground mb-6">
-                  <span className="flex items-center gap-2"><Calendar className="w-4 h-4" />{posts[0].date}</span>
-                  <span className="flex items-center gap-2"><Clock className="w-4 h-4" />{posts[0].readTime}</span>
+                <p className="text-lg text-muted-foreground mb-6">{featured.excerpt}</p>
+                <div className="flex items-center gap-6 text-[0.95rem] text-muted-foreground mb-7">
+                  <span className="flex items-center gap-2">
+                    <Calendar className="w-4 h-4 text-primary" />
+                    {featured.date}
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <Clock className="w-4 h-4 text-primary" />
+                    {featured.readTime}
+                  </span>
                 </div>
-                <div className="inline-flex items-center gap-2 text-primary font-medium">
-                  Ler artigo completo <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </div>
+                <span className="inline-flex items-center gap-2 text-primary font-medium">
+                  Ler artigo completo
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </span>
               </div>
-              <div className="relative aspect-video lg:aspect-auto rounded-2xl overflow-hidden bg-gradient-to-br from-primary/30 to-primary/5 flex items-center justify-center">
-                <TrendingUp className="w-32 h-32 text-primary/40" />
+              <div className="relative aspect-video lg:aspect-auto rounded-2xl overflow-hidden border border-border/60 bg-gradient-to-br from-primary/25 to-transparent flex items-center justify-center">
+                <TrendingUp className="w-28 h-28 text-primary/40" />
               </div>
             </div>
           </Link>
@@ -125,26 +156,32 @@ const Blog = () => {
 
         {/* Grid */}
         <section className="container mx-auto px-4 lg:px-8 pb-24">
-          <h3 className="text-2xl font-bold text-foreground mb-8">Últimos Artigos</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {posts.slice(1).map((post) => (
-              <Link
-                key={post.slug}
-                to={`/blog/${post.slug}`}
-                className="group relative overflow-hidden rounded-2xl border border-border bg-card/30 hover:border-primary/50 hover:-translate-y-1 transition-all duration-300"
-              >
-                <div className={`absolute inset-0 bg-gradient-to-br ${post.gradient} opacity-40 group-hover:opacity-70 transition-opacity`} />
-                <div className="relative p-6">
-                  <span className="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-medium mb-4">
-                    {post.category}
-                  </span>
-                  <h4 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors line-clamp-2">
+          <div className="flex items-center gap-4 mb-8">
+            <h3 className="font-display text-2xl lg:text-3xl font-semibold text-foreground">Últimos Artigos</h3>
+            <span className="flex-1 h-px bg-gradient-to-r from-border to-transparent" />
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+            {rest.map((post) => (
+              <Link key={post.slug} to={`/blog/${post.slug}`} className="group premium-card overflow-hidden">
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${post.gradient} opacity-30 group-hover:opacity-60 transition-opacity`}
+                />
+                <div className="relative p-7 flex flex-col h-full">
+                  <span className="badge-premium mb-5 w-fit">{post.category}</span>
+                  <h4 className="font-display text-xl font-semibold text-foreground mb-3 leading-snug group-hover:text-primary transition-colors line-clamp-2">
                     {post.title}
                   </h4>
-                  <p className="text-sm text-muted-foreground font-light mb-6 line-clamp-3">{post.excerpt}</p>
-                  <div className="flex items-center justify-between text-xs text-muted-foreground">
-                    <span className="flex items-center gap-1.5"><Calendar className="w-3 h-3" />{post.date}</span>
-                    <span className="flex items-center gap-1.5"><Clock className="w-3 h-3" />{post.readTime}</span>
+                  <p className="text-[0.975rem] text-muted-foreground mb-6 line-clamp-3">{post.excerpt}</p>
+                  <hr className="divider-premium mt-auto mb-4" />
+                  <div className="flex items-center justify-between text-sm text-muted-foreground">
+                    <span className="flex items-center gap-1.5">
+                      <Calendar className="w-3.5 h-3.5 text-primary" />
+                      {post.date}
+                    </span>
+                    <span className="flex items-center gap-1.5">
+                      <Clock className="w-3.5 h-3.5 text-primary" />
+                      {post.readTime}
+                    </span>
                   </div>
                 </div>
               </Link>
@@ -160,3 +197,4 @@ const Blog = () => {
 };
 
 export default Blog;
+

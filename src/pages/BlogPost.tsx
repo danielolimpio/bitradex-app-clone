@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
 import SEO from "@/seo/SEO";
-import { Calendar, Clock, ArrowLeft, TrendingUp } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, ArrowRight, TrendingUp, BadgeCheck, Sparkles } from "lucide-react";
 
 const INVITE_URL = "https://www.bitradex.ai/pt-br/account/register?inviteCode=7UII2W";
 
@@ -113,51 +113,144 @@ const BlogPost = () => {
   const post = slug ? posts[slug] : undefined;
   if (!post) return <Navigate to="/blog" replace />;
 
+  const related = Object.entries(posts)
+    .filter(([s]) => s !== slug)
+    .slice(0, 3);
+
   return (
     <div className="min-h-screen bg-background">
       <SEO title={`${post.title} | Bitradex Blog`} description={post.excerpt} />
       <Header />
       <main>
-        <section className="relative overflow-hidden border-b border-border">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-background" />
-          <div className="relative container mx-auto px-4 lg:px-8 py-16 lg:py-20 max-w-4xl">
-            <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary mb-6">
-              <ArrowLeft className="w-4 h-4" /> Voltar ao Blog
-            </Link>
-            <span className="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-medium mb-4">
-              {post.category}
-            </span>
-            <h1 className="text-3xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">{post.title}</h1>
-            <p className="text-lg text-muted-foreground font-light mb-6">{post.excerpt}</p>
-            <div className="flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2"><Calendar className="w-4 h-4" />{post.date}</span>
-              <span className="flex items-center gap-2"><Clock className="w-4 h-4" />{post.readTime}</span>
+        <section className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-[image:var(--gradient-halo)]" />
+          <div className="relative container mx-auto px-4 lg:px-8 py-14 lg:py-20 max-w-4xl">
+            {/* Premium breadcrumbs */}
+            <nav aria-label="Breadcrumb" className="mb-8">
+              <ol className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-secondary/40 text-sm max-w-full overflow-hidden">
+                <li>
+                  <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">Home</Link>
+                </li>
+                <li className="text-border">/</li>
+                <li>
+                  <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">Blog</Link>
+                </li>
+                <li className="text-border">/</li>
+                <li className="text-foreground font-medium truncate max-w-[16rem]">{post.category}</li>
+              </ol>
+            </nav>
+
+            <span className="badge-premium mb-5">{post.category}</span>
+            <h1 className="font-display text-3xl lg:text-5xl font-bold text-foreground mb-6 leading-[1.15]">{post.title}</h1>
+            <p className="text-lg lg:text-xl text-muted-foreground mb-8">{post.excerpt}</p>
+
+            {/* Premium author card */}
+            <div className="premium-panel hairline-top relative p-5 flex flex-wrap items-center gap-5">
+              <div className="relative">
+                <div className="w-14 h-14 rounded-full bg-gradient-primary flex items-center justify-center font-display text-xl font-bold text-primary-foreground">
+                  B
+                </div>
+                <span className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-background border border-primary/50 flex items-center justify-center">
+                  <BadgeCheck className="w-4 h-4 text-primary" />
+                </span>
+              </div>
+              <div className="min-w-0">
+                <p className="font-display text-base font-semibold text-foreground">Bitradex Research Desk</p>
+                <p className="text-sm text-muted-foreground">Analistas de mercado e especialistas em IA</p>
+              </div>
+              <div className="flex items-center gap-5 text-sm text-muted-foreground ml-auto">
+                <span className="flex items-center gap-2"><Calendar className="w-4 h-4 text-primary" />{post.date}</span>
+                <span className="flex items-center gap-2"><Clock className="w-4 h-4 text-primary" />{post.readTime}</span>
+              </div>
             </div>
           </div>
+          <div className="h-px w-full bg-gradient-to-r from-transparent via-border to-transparent" />
         </section>
 
-        <article className="container mx-auto px-4 lg:px-8 py-16 max-w-3xl">
-          {post.content.map((sec, i) => (
-            <section key={i} className="mb-10">
-              <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">{sec.heading}</h2>
-              <p className="text-muted-foreground leading-relaxed font-light text-lg">{sec.body}</p>
-            </section>
-          ))}
+        <article className="container mx-auto px-4 lg:px-8 py-14 max-w-3xl">
+          {/* Key takeaways table */}
+          <div className="premium-panel p-6 mb-12">
+            <h2 className="font-display text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
+              <Sparkles className="w-5 h-5 text-primary" /> Neste artigo
+            </h2>
+            <table className="table-premium !mt-0 !mb-0">
+              <thead>
+                <tr>
+                  <th className="w-16">#</th>
+                  <th>Tópico</th>
+                </tr>
+              </thead>
+              <tbody>
+                {post.content.map((sec, i) => (
+                  <tr key={i}>
+                    <td className="text-primary font-semibold">{String(i + 1).padStart(2, "0")}</td>
+                    <td>{sec.heading}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
 
-          <div className="mt-16 p-8 rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/10 to-transparent text-center">
+          <div className="prose-premium">
+            {post.content.map((sec, i) => (
+              <section key={i}>
+                <h2>{sec.heading}</h2>
+                <p>{sec.body}</p>
+                {i === 0 && (
+                  <div className="callout-premium">
+                    <p className="!mb-0">
+                      <strong className="mark-premium">Destaque:</strong> a Bitradex combina execução institucional,
+                      segurança auditada e o AI Bot ARK Trading em uma única plataforma.
+                    </p>
+                  </div>
+                )}
+              </section>
+            ))}
+          </div>
+
+          <div className="premium-panel hairline-top relative mt-16 p-9 text-center border-primary/25">
             <TrendingUp className="w-12 h-12 text-primary mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-foreground mb-3">Pronto para começar a operar?</h3>
-            <p className="text-muted-foreground mb-6 font-light">Junte-se a milhões de traders na Bitradex e ative o AI Bot em segundos.</p>
+            <h3 className="font-display text-2xl font-semibold text-foreground mb-3">Pronto para começar a operar?</h3>
+            <p className="text-muted-foreground mb-7">Junte-se a milhões de traders na Bitradex e ative o AI Bot em segundos.</p>
             <a
               href={INVITE_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-3 rounded-lg bg-gradient-primary text-primary-foreground font-medium hover:shadow-button transition-all"
+              className="inline-flex items-center gap-2 h-12 px-8 rounded-xl bg-gradient-primary text-primary-foreground font-medium shadow-button hover:-translate-y-0.5 transition-all"
             >
-              Criar Conta Grátis
+              Criar Conta Grátis <ArrowRight className="w-4 h-4" />
             </a>
           </div>
         </article>
+
+        {/* Related articles */}
+        <section className="container mx-auto px-4 lg:px-8 pb-24 max-w-6xl">
+          <div className="flex items-center gap-4 mb-8">
+            <h2 className="font-display text-2xl lg:text-3xl font-semibold text-foreground">Artigos recomendados</h2>
+            <span className="flex-1 h-px bg-gradient-to-r from-border to-transparent" />
+          </div>
+          <div className="grid md:grid-cols-3 gap-7">
+            {related.map(([s, p]) => (
+              <Link key={s} to={`/blog/${s}`} className="group premium-card p-7 flex flex-col">
+                <span className="badge-premium mb-5 w-fit">{p.category}</span>
+                <h3 className="font-display text-lg font-semibold text-foreground mb-3 leading-snug group-hover:text-primary transition-colors line-clamp-2">
+                  {p.title}
+                </h3>
+                <p className="text-[0.95rem] text-muted-foreground line-clamp-3 mb-6">{p.excerpt}</p>
+                <hr className="divider-premium mt-auto mb-4" />
+                <span className="flex items-center justify-between text-sm text-muted-foreground">
+                  <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5 text-primary" />{p.date}</span>
+                  <span className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5 text-primary" />{p.readTime}</span>
+                </span>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-10 text-center">
+            <Link to="/blog" className="inline-flex items-center gap-2 text-primary font-medium hover:underline underline-offset-4">
+              <ArrowLeft className="w-4 h-4" /> Voltar ao Blog
+            </Link>
+          </div>
+        </section>
       </main>
       <Footer />
       <ScrollToTop />
@@ -167,3 +260,4 @@ const BlogPost = () => {
 };
 
 export default BlogPost;
+

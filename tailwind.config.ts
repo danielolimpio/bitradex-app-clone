@@ -14,9 +14,12 @@ export default {
     },
     extend: {
       fontFamily: {
-        'montserrat': ['Montserrat', 'sans-serif'],
-        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        'montserrat': ['DM Sans', 'system-ui', 'sans-serif'],
+        'inter': ['Outfit', 'system-ui', '-apple-system', 'sans-serif'],
+        'sans': ['DM Sans', 'system-ui', 'sans-serif'],
+        'display': ['Outfit', 'system-ui', 'sans-serif'],
       },
+
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
