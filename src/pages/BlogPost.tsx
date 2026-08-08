@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
 import SEO from "@/seo/SEO";
-import { Calendar, Clock, ArrowLeft, TrendingUp } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, ArrowRight, TrendingUp, BadgeCheck, Sparkles } from "lucide-react";
 
 const INVITE_URL = "https://www.bitradex.ai/pt-br/account/register?inviteCode=7UII2W";
 
