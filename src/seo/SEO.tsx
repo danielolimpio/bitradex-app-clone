@@ -66,7 +66,18 @@ const SEO = ({ pathKey, title, description, extraKeywords, image }: SEOProps) =>
     sameAs: [
       "https://twitter.com/Bitradexen",
     ],
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        email: "contact@bitradex.app",
+        telephone: "+55 12 98251-9116",
+        availableLanguage: ["Portuguese", "English", "Spanish"],
+        url: `${SITE_URL}/contact`,
+      },
+    ],
   };
+
 
   const websiteJsonLd = {
     "@context": "https://schema.org",
