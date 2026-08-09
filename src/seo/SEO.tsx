@@ -36,10 +36,15 @@ const SEO = ({ pathKey, title, description, extraKeywords, image }: SEOProps) =>
   // Strip language prefix (e.g. "/pt/spot" -> "/spot") for page lookup
   const langPrefixRegex = /^\/(en|pt|es|de|id|th|ko|ru|ja|ms|zh)(?=\/|$)/;
   const path = rawPath.replace(langPrefixRegex, "") || "/";
-  const page = locale.pages[path] ?? {
-    title: locale.defaultTitle,
-    description: locale.defaultDescription,
-  };
+  // Prefer the locale-specific entry; fall back to the English entry so every
+  // route keeps a unique title/description instead of reusing the site default.
+  const page =
+    locale.pages[path] ??
+    seoLocales.en.pages[path] ?? {
+      title: locale.defaultTitle,
+      description: locale.defaultDescription,
+    };
+
 
   const finalTitle = title ?? page.title;
   const finalDescription = description ?? page.description;
