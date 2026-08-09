@@ -40,6 +40,41 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": offices.map((office) => ({
+              "@type": "FinancialService",
+              name: `Bitradex ${office.city}`,
+              parentOrganization: { "@type": "Organization", name: "Bitradex" },
+              url: "https://bitradex.app/contact",
+              telephone: office.phone,
+              email: office.email,
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: office.address,
+                addressLocality: office.city,
+                addressCountry: office.country,
+              },
+              openingHoursSpecification: {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                ],
+                opens: "09:00",
+                closes: "18:00",
+              },
+            })),
+          }),
+        }}
+      />
+
       <Header />
 
       <section className="relative py-20 lg:py-32 overflow-hidden">
