@@ -58,6 +58,42 @@ const OurTeam = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              ...leadership.map((p) => ({
+                "@type": "Person",
+                name: p.name,
+                jobTitle: t(`ourTeam.roles.${p.roleKey}`),
+                description: p.bio,
+                image: p.image,
+                worksFor: { "@type": "Organization", name: "Bitradex" },
+              })),
+              ...departments.flatMap((d) =>
+                d.members.map((m) => ({
+                  "@type": "Person",
+                  name: m.name,
+                  jobTitle: t(`ourTeam.roles.${m.roleKey}`),
+                  image: m.image,
+                  worksFor: { "@type": "Organization", name: "Bitradex" },
+                }))
+              ),
+              ...advisors.map((a) => ({
+                "@type": "Person",
+                name: a.name,
+                jobTitle: t(`ourTeam.roles.${a.roleKey}`),
+                description: a.bio,
+                image: a.image,
+                worksFor: { "@type": "Organization", name: "Bitradex" },
+              })),
+            ],
+          }),
+        }}
+      />
+
       <Header />
 
       <section className="relative py-20 lg:py-32 overflow-hidden">
