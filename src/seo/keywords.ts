@@ -215,8 +215,49 @@ export const seoLocales: Record<SeoLang, SeoLocale> = {
         description:
           "Bitradex user agreement defining account rules, trading conduct, eligibility, prohibited activities and platform responsibilities.",
       },
+      "/blog": {
+        title: "Bitradex Blog | Crypto Trading Guides, AI Bot & Market News",
+        description:
+          "Tutorials, AI bot strategies, market analysis and platform updates from the Bitradex team — practical guides for spot and futures traders.",
+      },
+      "/help-center": {
+        title: "Bitradex Help Center | Account, Deposits & Trading Support",
+        description:
+          "Step-by-step help for Bitradex accounts: verification, deposits, withdrawals, security settings, AI bot setup and troubleshooting.",
+      },
+      "/trading-guide": {
+        title: "Crypto Trading Guide | Learn Spot & Futures on Bitradex",
+        description:
+          "Learn crypto trading from zero: order types, leverage, risk management, technical analysis and how to automate trades with the Bitradex AI bot.",
+      },
+      "/system-status": {
+        title: "Bitradex System Status | Platform Uptime & Incidents",
+        description:
+          "Live status of Bitradex trading engine, deposits, withdrawals, API and AI bot services, plus incident history and maintenance windows.",
+      },
+      "/support-center": {
+        title: "Bitradex Support Center | Contact 24/7 Customer Service",
+        description:
+          "Reach Bitradex support 24/7 via live chat, WhatsApp, email or ticket, with response times and guidance for account and trading issues.",
+      },
+      "/security": {
+        title: "Bitradex Security | CertiK Audit, Cold Storage & 2FA",
+        description:
+          "How Bitradex protects funds: CertiK audit, cold storage, multi-signature wallets, 2FA, withdrawal whitelists and continuous monitoring.",
+      },
+      "/referral": {
+        title: "Bitradex Referral Program | Invite Code & Commissions",
+        description:
+          "Earn lifetime commissions with the Bitradex referral program: share your invite code, track rewards and unlock higher commission tiers.",
+      },
+      "/vip": {
+        title: "Bitradex VIP Program | Fee Discounts & Priority Support",
+        description:
+          "Bitradex VIP tiers explained: lower trading fees, higher withdrawal limits, dedicated account managers and priority 24/7 support.",
+      },
     },
   },
+
 
   pt: {
     htmlLang: "pt-BR",
