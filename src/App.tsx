@@ -33,6 +33,8 @@ import SupportCenter from "./pages/SupportCenter";
 import Security from "./pages/Security";
 import Referral from "./pages/Referral";
 import VIPProgram from "./pages/VIPProgram";
+import ApiDocs from "./pages/ApiDocs";
+import MobileApp from "./pages/MobileApp";
 
 const queryClient = new QueryClient();
 const SUPPORTED_LANGS = ["pt", "es", "de", "id", "th", "ko", "ru", "ja", "ms", "zh"];
@@ -78,6 +80,8 @@ const pageRoutes: { path: string; element: JSX.Element }[] = [
   { path: "security", element: <Security /> },
   { path: "referral", element: <Referral /> },
   { path: "vip", element: <VIPProgram /> },
+  { path: "api-docs", element: <ApiDocs /> },
+  { path: "mobile-app", element: <MobileApp /> },
 ];
 
 const AppRoutes = () => (

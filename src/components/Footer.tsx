@@ -25,8 +25,8 @@ const Footer = () => {
         { text: t("footer.links.spotTrading"), href: "/spot" },
         { text: t("footer.links.futuresTrading"), href: "/futures" },
         { text: "AI Bot", href: "/#ai-bot" },
-        { text: t("footer.links.apiDocs"), href: "#" },
-        { text: t("footer.links.mobileApp"), href: "#" },
+        { text: t("footer.links.apiDocs"), href: "/api-docs" },
+        { text: t("footer.links.mobileApp"), href: "/mobile-app" },
       ],
     },
     {
