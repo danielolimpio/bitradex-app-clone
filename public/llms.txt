@@ -4,6 +4,9 @@
 
 Bitradex (BITRADEX FINTECH LIMITED) é uma exchange de criptomoedas com foco em trading automatizado por IA. O site bitradex.app é o portal brasileiro/multilíngue com tutoriais, guias de cadastro, informações sobre AI Bot, spot, futuros, BTX Token e o embaixador global David Villa.
 
+Idiomas: en (raiz), pt, es, de, id, th, ko, ru, ja, ms, zh — via prefixo de caminho (ex.: /pt/spot).
+Sitemap: https://bitradex.app/sitemap.xml
+
 ## Pages
 - [Home](/): Visão geral, AI Bot, ecossistema, David Villa
 - [Sobre](/about-us): História e missão
@@ -11,7 +14,17 @@ Bitradex (BITRADEX FINTECH LIMITED) é uma exchange de criptomoedas com foco em 
 - [Spot](/spot): Trading spot com TradingView
 - [Futuros](/futures): Perpétuos
 - [Institucional](/institutional): Serviços institucionais
+- [Blog](/blog): Artigos e guias em português
 - [FAQ](/faq): Perguntas frequentes
+- [Central de Ajuda](/help-center)
+- [Guia de Trading](/trading-guide)
+- [Suporte](/support-center)
+- [Segurança](/security)
+- [Programa de Indicação](/referral)
+- [Programa VIP](/vip)
+- [Documentação da API](/api-docs)
+- [Aplicativo Mobile](/mobile-app)
+- [Status do Sistema](/system-status)
 - [Contato](/contact): WhatsApp e email
 - [Nossa Equipe](/our-team)
 - [Carreiras](/careers)
@@ -23,3 +36,5 @@ Bitradex (BITRADEX FINTECH LIMITED) é uma exchange de criptomoedas com foco em 
 - [Risk Disclosure](/risk-disclosure)
 - [AML](/aml-policy)
 - [Compliance](/compliance)
+- [Disclaimer](/disclaimer)
+- [Acordo do Usuário](/user-agreement)
