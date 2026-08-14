@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://bitradex.app</loc>
+    <loc>https://bitradex.app/</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bitradex.app"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bitradex.app/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://bitradex.app/pt"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://bitradex.app/es"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://bitradex.app/de"/>
@@ -16,13 +16,13 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://bitradex.app/ja"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://bitradex.app/ms"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://bitradex.app/zh"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bitradex.app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bitradex.app/"/>
   </url>
   <url>
     <loc>https://bitradex.app/pt</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bitradex.app"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bitradex.app/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://bitradex.app/pt"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://bitradex.app/es"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://bitradex.app/de"/>
@@ -33,13 +33,13 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://bitradex.app/ja"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://bitradex.app/ms"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://bitradex.app/zh"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bitradex.app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bitradex.app/"/>
   </url>
   <url>
     <loc>https://bitradex.app/es</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bitradex.app"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bitradex.app/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://bitradex.app/pt"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://bitradex.app/es"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://bitradex.app/de"/>
@@ -50,13 +50,13 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://bitradex.app/ja"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://bitradex.app/ms"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://bitradex.app/zh"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bitradex.app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bitradex.app/"/>
   </url>
   <url>
     <loc>https://bitradex.app/de</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bitradex.app"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bitradex.app/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://bitradex.app/pt"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://bitradex.app/es"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://bitradex.app/de"/>
@@ -67,13 +67,13 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://bitradex.app/ja"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://bitradex.app/ms"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://bitradex.app/zh"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bitradex.app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bitradex.app/"/>
   </url>
   <url>
     <loc>https://bitradex.app/id</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bitradex.app"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bitradex.app/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://bitradex.app/pt"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://bitradex.app/es"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://bitradex.app/de"/>
@@ -84,13 +84,13 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://bitradex.app/ja"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://bitradex.app/ms"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://bitradex.app/zh"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bitradex.app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bitradex.app/"/>
   </url>
   <url>
     <loc>https://bitradex.app/th</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bitradex.app"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bitradex.app/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://bitradex.app/pt"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://bitradex.app/es"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://bitradex.app/de"/>
@@ -101,13 +101,13 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://bitradex.app/ja"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://bitradex.app/ms"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://bitradex.app/zh"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bitradex.app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bitradex.app/"/>
   </url>
   <url>
     <loc>https://bitradex.app/ko</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bitradex.app"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bitradex.app/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://bitradex.app/pt"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://bitradex.app/es"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://bitradex.app/de"/>
@@ -118,13 +118,13 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://bitradex.app/ja"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://bitradex.app/ms"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://bitradex.app/zh"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bitradex.app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bitradex.app/"/>
   </url>
   <url>
     <loc>https://bitradex.app/ru</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bitradex.app"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bitradex.app/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://bitradex.app/pt"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://bitradex.app/es"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://bitradex.app/de"/>
@@ -135,13 +135,13 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://bitradex.app/ja"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://bitradex.app/ms"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://bitradex.app/zh"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bitradex.app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bitradex.app/"/>
   </url>
   <url>
     <loc>https://bitradex.app/ja</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bitradex.app"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bitradex.app/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://bitradex.app/pt"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://bitradex.app/es"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://bitradex.app/de"/>
@@ -152,13 +152,13 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://bitradex.app/ja"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://bitradex.app/ms"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://bitradex.app/zh"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bitradex.app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bitradex.app/"/>
   </url>
   <url>
     <loc>https://bitradex.app/ms</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bitradex.app"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bitradex.app/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://bitradex.app/pt"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://bitradex.app/es"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://bitradex.app/de"/>
@@ -169,13 +169,13 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://bitradex.app/ja"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://bitradex.app/ms"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://bitradex.app/zh"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bitradex.app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bitradex.app/"/>
   </url>
   <url>
     <loc>https://bitradex.app/zh</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bitradex.app"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bitradex.app/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://bitradex.app/pt"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://bitradex.app/es"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://bitradex.app/de"/>
@@ -186,7 +186,7 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://bitradex.app/ja"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://bitradex.app/ms"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://bitradex.app/zh"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bitradex.app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bitradex.app/"/>
   </url>
   <url>
     <loc>https://bitradex.app/markets</loc>
