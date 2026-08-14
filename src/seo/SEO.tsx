@@ -103,16 +103,17 @@ const SEO = ({ pathKey, title, description, extraKeywords, image }: SEOProps) =>
 
       <link rel="canonical" href={canonical} />
 
-      {/* Hreflang alternates for each supported language */}
+      {/* Hreflang alternates for each supported language (path-prefixed URLs) */}
       {seoLangs.map((l) => (
         <link
           key={l}
           rel="alternate"
           hrefLang={seoLocales[l].htmlLang}
-          href={`${SITE_URL}${path === "/" ? "" : path}?lang=${l}`}
+          href={`${SITE_URL}${l === "en" ? "" : `/${l}`}${path === "/" ? "" : path}`}
         />
       ))}
-      <link rel="alternate" hrefLang="x-default" href={canonical} />
+      <link rel="alternate" hrefLang="x-default" href={`${SITE_URL}${path === "/" ? "" : path}`} />
+
 
       {/* Open Graph */}
       <meta property="og:site_name" content={locale.siteName} />
