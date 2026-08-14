@@ -70,9 +70,10 @@ const entries: Entry[] = [
 
 const url = (lang: string, path: string) => {
   const prefix = lang === "en" ? "" : `/${lang}`;
-  const p = path === "/" ? "" : path;
-  return `${BASE_URL}${prefix}${p}` || `${BASE_URL}/`;
+  const p = path === "/" ? (prefix ? "" : "/") : path;
+  return `${BASE_URL}${prefix}${p}`;
 };
+
 
 function generateSitemap() {
   const blocks: string[] = [];

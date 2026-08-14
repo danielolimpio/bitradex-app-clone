@@ -52,7 +52,9 @@ const SEO = ({ pathKey, title, description, extraKeywords, image }: SEOProps) =>
     ...locale.keywords,
     ...(extraKeywords ?? []),
   ].join(", ");
-  const canonical = `${SITE_URL}${path === "/" ? "" : path}`;
+  const langPrefix = lang === "en" ? "" : `/${lang}`;
+  const canonical = `${SITE_URL}${langPrefix}${path === "/" ? (langPrefix ? "" : "/") : path}`;
+
   const ogImage = image ?? DEFAULT_IMAGE;
 
   // JSON-LD structured data
