@@ -1,30 +1,55 @@
-name: Deploy Lovable via FTP na Hostinger
+name: Build e deploy na Hostinger
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
+
+concurrency:
+  group: hostinger-production
+  cancel-in-progress: true
+
+permissions:
+  contents: read
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: Clonar o repositório
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Configurar Node.js 18
-        uses: actions/setup-node@v3
+      - name: Configurar Node.js 20
+        uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: "20"
+          cache: npm
 
       - name: Instalar dependências
-        run: npm install
+        run: npm ci
 
       - name: Build do projeto
         run: npm run build
 
-      - name: Mostrar arquivos gerados
-        run: ls -al dist/
+      - name: Validar build e credenciais configuradas
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PASS: ${{ secrets.FTP_PASS }}
+        run: |
+          test -f dist/index.html || { echo "ERRO: dist/index.html não foi gerado."; exit 1; }
+          test -n "$FTP_HOST" || { echo "ERRO: secret FTP_HOST não configurado."; exit 1; }
+          test -n "$FTP_USER" || { echo "ERRO: secret FTP_USER não configurado."; exit 1; }
+          test -n "$FTP_PASS" || { echo "ERRO: secret FTP_PASS não configurado."; exit 1; }
+          case "$FTP_HOST" in
+            ftp://*|ftps://*|sftp://*)
+              echo "ERRO: FTP_HOST deve conter somente o hostname ou IP, sem protocolo."
+              exit 1
+              ;;
+          esac
+          echo "Build e configuração local validados."
 
       - name: Deploy FTP para Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -35,6 +60,6 @@ jobs:
           password: ${{ secrets.FTP_PASS }}
           local-dir: dist/
           server-dir: /
-          dangerous-clean-slate: true
+          dangerous-clean-slate: false
           dry-run: false
-          log-level: verbose
+          log-level: standard
