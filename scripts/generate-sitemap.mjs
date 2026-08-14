@@ -6,8 +6,8 @@ import { resolve } from "path";
 
 const BASE_URL = "https://bitradex.app";
 
-const LANGS = ["pt", "es", "de", "id", "th", "ko", "ru", "ja", "ms", "zh"] as const;
-const HREFLANG: Record<string, string> = {
+const LANGS = ["pt", "es", "de", "id", "th", "ko", "ru", "ja", "ms", "zh"];
+const HREFLANG = {
   en: "en",
   pt: "pt-BR",
   es: "es",
@@ -21,12 +21,6 @@ const HREFLANG: Record<string, string> = {
   zh: "zh-CN",
 };
 
-interface Entry {
-  path: string; // without language prefix, starts with "/" ("/" for home)
-  changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
-  priority?: string;
-}
-
 const blogSlugs = [
   "como-comecar-trading-cripto-2026",
   "ai-bot-bitradex-como-funciona",
@@ -36,13 +30,13 @@ const blogSlugs = [
   "programa-vip-referral-bitradex",
 ];
 
-const entries: Entry[] = [
+const entries = [
   { path: "/", changefreq: "daily", priority: "1.0" },
   { path: "/markets", changefreq: "daily", priority: "0.9" },
   { path: "/spot", changefreq: "daily", priority: "0.9" },
   { path: "/futures", changefreq: "daily", priority: "0.9" },
   { path: "/blog", changefreq: "daily", priority: "0.9" },
-  ...blogSlugs.map((slug): Entry => ({ path: `/blog/${slug}`, changefreq: "monthly", priority: "0.8" })),
+  ...blogSlugs.map((slug) => ({ path: `/blog/${slug}`, changefreq: "monthly", priority: "0.8" })),
   { path: "/about-us", changefreq: "monthly", priority: "0.8" },
   { path: "/faq", changefreq: "weekly", priority: "0.8" },
   { path: "/help-center", changefreq: "weekly", priority: "0.8" },
@@ -68,7 +62,7 @@ const entries: Entry[] = [
   { path: "/user-agreement", changefreq: "yearly", priority: "0.3" },
 ];
 
-const url = (lang: string, path: string) => {
+const url = (lang, path) => {
   const prefix = lang === "en" ? "" : `/${lang}`;
   const p = path === "/" ? (prefix ? "" : "/") : path;
   return `${BASE_URL}${prefix}${p}`;
@@ -76,7 +70,7 @@ const url = (lang: string, path: string) => {
 
 
 function generateSitemap() {
-  const blocks: string[] = [];
+  const blocks = [];
 
   for (const entry of entries) {
     for (const lang of ["en", ...LANGS]) {
