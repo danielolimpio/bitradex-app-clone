@@ -75,7 +75,7 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO />
+      <SEO breadcrumbs={[{ name: "Blog", path: "/blog" }]} />
       <Header />
       <main>
         {/* Hero */}
