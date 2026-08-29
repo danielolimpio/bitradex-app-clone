@@ -119,6 +119,52 @@ const SEO = ({
     },
   };
 
+  // BreadcrumbList — helps Google render breadcrumb rich results
+  const trail = [{ name: "Home", path: "/" }, ...(breadcrumbs ?? [])];
+  const breadcrumbJsonLd =
+    trail.length > 1
+      ? {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: trail.map((item, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            name: item.name,
+            item: `${SITE_URL}${langPrefix}${item.path === "/" ? "" : item.path}` || SITE_URL,
+          })),
+        }
+      : null;
+
+  const articleJsonLd =
+    ogType === "article" && article
+      ? {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: finalTitle,
+          description: finalDescription,
+          image: ogImage,
+          inLanguage: locale.htmlLang,
+          datePublished: article.publishedTime,
+          dateModified: article.modifiedTime ?? article.publishedTime,
+          articleSection: article.section,
+          mainEntityOfPage: { "@type": "WebPage", "@id": canonical },
+          author: {
+            "@type": "Organization",
+            name: article.author ?? BRAND,
+            url: SITE_URL,
+          },
+          publisher: {
+            "@type": "Organization",
+            name: BRAND,
+            logo: { "@type": "ImageObject", url: ogImage },
+          },
+        }
+      : null;
+
+  const extraNodes = [breadcrumbJsonLd, articleJsonLd, ...(jsonLd ?? [])].filter(
+    Boolean,
+  ) as Record<string, unknown>[];
+
   return (
     <Helmet>
       <html lang={locale.htmlLang} />
@@ -127,6 +173,7 @@ const SEO = ({
       <meta name="keywords" content={finalKeywords} />
       <meta name="author" content={BRAND} />
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+      <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large" />
 
       <link rel="canonical" href={canonical} />
 
@@ -145,11 +192,22 @@ const SEO = ({
       {/* Open Graph */}
       <meta property="og:site_name" content={locale.siteName} />
       <meta property="og:locale" content={locale.ogLocale} />
-      <meta property="og:type" content="website" />
+      <meta property="og:type" content={ogType} />
       <meta property="og:title" content={finalTitle} />
       <meta property="og:description" content={finalDescription} />
       <meta property="og:url" content={canonical} />
       <meta property="og:image" content={ogImage} />
+      <meta property="og:image:alt" content={finalTitle} />
+      {article?.publishedTime && (
+        <meta property="article:published_time" content={article.publishedTime} />
+      )}
+      {article && (
+        <meta
+          property="article:modified_time"
+          content={article.modifiedTime ?? article.publishedTime}
+        />
+      )}
+      {article?.section && <meta property="article:section" content={article.section} />}
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -157,11 +215,18 @@ const SEO = ({
       <meta name="twitter:title" content={finalTitle} />
       <meta name="twitter:description" content={finalDescription} />
       <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:image:alt" content={finalTitle} />
 
       <script type="application/ld+json">{JSON.stringify(orgJsonLd)}</script>
       <script type="application/ld+json">{JSON.stringify(websiteJsonLd)}</script>
+      {extraNodes.map((node, i) => (
+        <script key={i} type="application/ld+json">
+          {JSON.stringify(node)}
+        </script>
+      ))}
     </Helmet>
   );
 };
+
 
 export default SEO;
