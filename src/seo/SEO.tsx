@@ -38,7 +38,17 @@ const DEFAULT_IMAGE = "https://bitradex.app/assets/bitradex-logo-CS93K5c3.png";
  * Each language only exposes its own keyword set so search engines see
  * locale-specific content (e.g. PT keywords only when language is pt).
  */
-const SEO = ({ pathKey, title, description, extraKeywords, image }: SEOProps) => {
+const SEO = ({
+  pathKey,
+  title,
+  description,
+  extraKeywords,
+  image,
+  ogType = "website",
+  article,
+  breadcrumbs,
+  jsonLd,
+}: SEOProps) => {
   const { i18n } = useTranslation();
   const location = useLocation();
 
