@@ -49,7 +49,7 @@ const PressMedia = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO />
+      <SEO breadcrumbs={[{ name: "Press & Media", path: "/press-media" }]} />
       <Header />
 
       <section className="relative py-20 lg:py-32 overflow-hidden">

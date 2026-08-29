@@ -68,7 +68,7 @@ const MobileApp = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO />
+      <SEO breadcrumbs={[{ name: "Mobile App", path: "/mobile-app" }]} />
       <Header />
       <main>
         <section className="relative overflow-hidden border-b border-border">

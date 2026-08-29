@@ -49,7 +49,7 @@ const Spot = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      <SEO />
+      <SEO breadcrumbs={[{ name: "Spot Trading", path: "/spot" }]} />
       <Header />
 
       <main className="flex-1 container mx-auto px-4 lg:px-8 py-4">

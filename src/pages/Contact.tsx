@@ -39,7 +39,7 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO />
+      <SEO breadcrumbs={[{ name: "Contact", path: "/contact" }]} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

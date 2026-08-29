@@ -21,7 +21,7 @@ const TradingGuide = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
   return (
     <div className="min-h-screen bg-background">
-      <SEO />
+      <SEO breadcrumbs={[{ name: "Trading Guide", path: "/trading-guide" }]} />
       <Header />
       <main>
         <section className="relative overflow-hidden border-b border-border">

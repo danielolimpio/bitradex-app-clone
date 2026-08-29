@@ -75,7 +75,7 @@ const ApiDocs = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO />
+      <SEO breadcrumbs={[{ name: "API Documentation", path: "/api-docs" }]} />
       <Header />
       <main>
         <section className="relative overflow-hidden border-b border-border">

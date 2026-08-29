@@ -12,7 +12,7 @@ const PrivacyPolicy = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO />
+      <SEO breadcrumbs={[{ name: "Privacy Policy", path: "/privacy-policy" }]} />
       <Header />
       <main className="container mx-auto px-4 lg:px-8 py-16 max-w-4xl">
         <LegalLanguageNotice /><h1 className="text-4xl md:text-5xl font-bold mb-8">BitradeX Privacy Policy</h1>
