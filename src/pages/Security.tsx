@@ -28,7 +28,7 @@ const Security = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
   return (
     <div className="min-h-screen bg-background">
-      <SEO />
+      <SEO breadcrumbs={[{ name: "Security", path: "/security" }]} />
       <Header />
       <main>
         <section className="relative overflow-hidden border-b border-border">

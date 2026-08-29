@@ -17,7 +17,7 @@ const SupportCenter = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
   return (
     <div className="min-h-screen bg-background">
-      <SEO />
+      <SEO breadcrumbs={[{ name: "Support Center", path: "/support-center" }]} />
       <Header />
       <main>
         <section className="relative overflow-hidden border-b border-border">
