@@ -14,9 +14,24 @@ interface SEOProps {
   extraKeywords?: string[];
   /** Optional Open Graph image. */
   image?: string;
+  /** Open Graph type. Use "article" for blog posts. */
+  ogType?: "website" | "article";
+  /** Article metadata (blog posts only). */
+  article?: {
+    /** ISO date, e.g. 2026-07-15 */
+    publishedTime: string;
+    modifiedTime?: string;
+    section?: string;
+    author?: string;
+  };
+  /** Extra breadcrumb trail (Home is prepended automatically). */
+  breadcrumbs?: { name: string; path: string }[];
+  /** Any additional JSON-LD nodes to emit for this page. */
+  jsonLd?: Record<string, unknown>[];
 }
 
 const DEFAULT_IMAGE = "https://bitradex.app/assets/bitradex-logo-CS93K5c3.png";
+
 
 /**
  * Renders SEO meta tags scoped to the current i18n language.
