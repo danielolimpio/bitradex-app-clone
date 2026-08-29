@@ -12,6 +12,8 @@ const INVITE_URL = "https://www.bitradex.ai/pt-br/account/register?inviteCode=7U
 interface Post {
   title: string;
   date: string;
+  /** ISO date used for Article structured data */
+  isoDate: string;
   readTime: string;
   category: string;
   excerpt: string;
@@ -22,6 +24,7 @@ const posts: Record<string, Post> = {
   "como-comecar-trading-cripto-2026": {
     title: "Como Começar no Trading de Criptomoedas em 2026: Guia Completo",
     date: "15 Jul 2026",
+    isoDate: "2026-07-15",
     readTime: "8 min",
     category: "Guia",
     excerpt: "Um passo a passo definitivo para iniciantes que querem entrar no mercado cripto com segurança, estratégia e o suporte do AI Bot da Bitradex.",
@@ -37,6 +40,7 @@ const posts: Record<string, Post> = {
   "ai-bot-bitradex-como-funciona": {
     title: "Bitradex AI Bot: Como a Inteligência Artificial Revoluciona o Trading",
     date: "12 Jul 2026",
+    isoDate: "2026-07-12",
     readTime: "10 min",
     category: "AI Trading",
     excerpt: "Descubra como o modelo ARK Trading analisa trilhões de parâmetros para executar operações lucrativas 24/7 no mercado de criptomoedas.",
@@ -51,6 +55,7 @@ const posts: Record<string, Post> = {
   "spot-vs-futures-qual-escolher": {
     title: "Spot vs Futures: Qual Modalidade Escolher na Bitradex?",
     date: "08 Jul 2026",
+    isoDate: "2026-07-08",
     readTime: "6 min",
     category: "Educação",
     excerpt: "Entenda as diferenças entre Spot Trading e Futuros Perpétuos, quando usar cada uma e como maximizar seus resultados.",
@@ -65,6 +70,7 @@ const posts: Record<string, Post> = {
   "seguranca-carteira-cripto": {
     title: "Segurança em Cripto: Como Proteger Seus Ativos Digitais",
     date: "03 Jul 2026",
+    isoDate: "2026-07-03",
     readTime: "7 min",
     category: "Segurança",
     excerpt: "Melhores práticas de segurança, autenticação em dois fatores, cold storage e como a Bitradex protege bilhões em ativos.",
@@ -79,6 +85,7 @@ const posts: Record<string, Post> = {
   "analise-tecnica-basico-cripto": {
     title: "Análise Técnica para Cripto: Do Zero ao Avançado",
     date: "28 Jun 2026",
+    isoDate: "2026-06-28",
     readTime: "12 min",
     category: "Análise",
     excerpt: "Aprenda a interpretar candles, suportes, resistências, RSI, MACD e outros indicadores essenciais no trading de criptomoedas.",
@@ -94,6 +101,7 @@ const posts: Record<string, Post> = {
   "programa-vip-referral-bitradex": {
     title: "Programa VIP e Referral Bitradex: Maximize seus Benefícios",
     date: "22 Jun 2026",
+    isoDate: "2026-06-22",
     readTime: "5 min",
     category: "Benefícios",
     excerpt: "Conheça os níveis VIP, comissões de indicação e como escalar seus ganhos na plataforma Bitradex.",
@@ -119,7 +127,20 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO title={`${post.title} | Bitradex Blog`} description={post.excerpt} />
+      <SEO
+        title={`${post.title} | Bitradex Blog`}
+        description={post.excerpt}
+        ogType="article"
+        article={{
+          publishedTime: post.isoDate,
+          section: post.category,
+          author: "Bitradex Research Desk",
+        }}
+        breadcrumbs={[
+          { name: "Blog", path: "/blog" },
+          { name: post.title, path: `/blog/${slug}` },
+        ]}
+      />
       <Header />
       <main>
         <section className="relative overflow-hidden">
