@@ -97,27 +97,31 @@
     "volume": "Volume"
   },
   "aiBot": {
-    "badge": "Powered by ARK Trading Model",
-    "title": "Bitradex AI Bot: อนาคตของการเทรด",
-    "subtitle": "Say goodbye to constant market monitoring. Let our advanced AI do the trading for you with institutional-grade strategies.",
     "features": {
       "oneClick": {
+        "alt": "Icon of a mouse cursor clicking a button, representing one-click subscription to the AI Bot",
         "title": "One-Click Subscribe",
         "description": "Start trading with AI in seconds. No complex setup or prior experience needed."
       },
       "strategy": {
+        "alt": "Icon of a brain connected to circuits, representing AI-driven trading strategy",
         "title": "AI-Driven Strategy",
         "description": "Leverages trillion-parameter financial models to identify optimal trading opportunities."
       },
       "transparent": {
+        "alt": "Icon of a transparent shield with a checkmark, representing fully transparent trading",
         "title": "Fully Transparent Trading",
         "description": "Real-time tracking of all trades and performance metrics with easy-to-understand dashboards."
       },
       "risk": {
+        "alt": "Icon of a gauge with a warning sign, representing real-time risk control",
         "title": "Real-Time Risk Control",
         "description": "Advanced risk management algorithms protect your capital in volatile market conditions."
       }
     },
+    "badge": "Powered by ARK Trading Model",
+    "title": "Bitradex AI Bot: อนาคตของการเทรด",
+    "subtitle": "Say goodbye to constant market monitoring. Let our advanced AI do the trading for you with institutional-grade strategies.",
     "performance": {
       "title": "Example Performance",
       "winRate": "Win Rate*",
@@ -1017,5 +1021,318 @@
   },
   "legal": {
     "notice": "เอกสารทางกฎหมายนี้เผยแพร่เป็นภาษาอังกฤษเพื่อความถูกต้องและความสม่ำเสมอทางกฎหมายในทุกเขตอำนาจศาล หากต้องการความช่วยเหลือ โปรดติดต่อทีมสนับสนุนของเรา"
+  },
+  "mobileApp": {
+    "hero": {
+      "title": "Bitradex App for Android and iOS",
+      "subtitle": "Trade spot, futures and the AI Bot from anywhere, with professional charts, real-time alerts and institutional-grade security.",
+      "ctaPrimary": "Create account and download",
+      "ctaSecondary": "See features"
+    },
+    "featuresTitle": "Everything you do on desktop, in the palm of your hand",
+    "features": {
+      "charts": {
+        "title": "TradingView charts",
+        "desc": "Candles, over 100 indicators and advanced drawing tools right on your phone."
+      },
+      "bot": {
+        "title": "AI Bot in your pocket",
+        "desc": "Start, pause and track automated strategies with a single tap."
+      },
+      "alerts": {
+        "title": "Price alerts",
+        "desc": "Instant push notifications for prices, fills and liquidations."
+      },
+      "biometrics": {
+        "title": "Biometric login",
+        "desc": "Face ID and fingerprint, with mandatory 2FA on withdrawals."
+      },
+      "deposits": {
+        "title": "Fast local deposits",
+        "desc": "Deposits and withdrawals in local currency approved within minutes."
+      },
+      "languages": {
+        "title": "10 languages",
+        "desc": "Full interface in English, Portuguese, Spanish and seven more languages."
+      }
+    },
+    "specsTitle": "Specifications",
+    "specs": {
+      "android": {
+        "label": "Android",
+        "value": "8.0 or higher · 85 MB"
+      },
+      "ios": {
+        "label": "iOS",
+        "value": "14.0 or higher · 112 MB"
+      },
+      "languages": {
+        "label": "Languages",
+        "value": "10 languages including English"
+      },
+      "darkMode": {
+        "label": "Dark mode",
+        "value": "Native, with optional light theme"
+      },
+      "updates": {
+        "label": "Updates",
+        "value": "Two-week release cycle"
+      },
+      "support": {
+        "label": "Support",
+        "value": "24/7 in-app chat"
+      }
+    },
+    "stepsTitle": "Get started in 4 steps",
+    "steps": {
+      "download": {
+        "title": "Download the app",
+        "desc": "Use the QR code on the home page or download directly from your device's store."
+      },
+      "account": {
+        "title": "Create your account",
+        "desc": "Sign up in under 2 minutes with your email or phone number."
+      },
+      "kyc": {
+        "title": "Verify your identity",
+        "desc": "KYC with a selfie and ID document, usually approved within minutes."
+      },
+      "trade": {
+        "title": "Deposit and trade",
+        "desc": "Fund your account with crypto or local currency and start trading spot, futures or the AI Bot."
+      }
+    },
+    "securityTitle": "Security in the app",
+    "security": {
+      "twofa": "Mandatory 2FA for withdrawals and changes to sensitive data",
+      "whitelist": "Withdrawal address whitelist synced with the app",
+      "device": "New device detection with email confirmation",
+      "tls": "Encrypted sessions with TLS 1.3 and certificate pinning",
+      "lock": "Automatic app lock after inactivity"
+    },
+    "faqTitle": "Frequently asked questions",
+    "faqs": {
+      "free": {
+        "q": "Is the Bitradex app free?",
+        "a": "Yes. Downloading and using the app is free. You only pay the platform's standard trading fees."
+      },
+      "sameAccount": {
+        "q": "Can I use the same account on the app and the website?",
+        "a": "Yes. It is a single account: balances, orders, positions and security settings sync in real time."
+      },
+      "botClosed": {
+        "q": "Does the AI Bot keep trading when the app is closed?",
+        "a": "Yes. Strategies run on Bitradex servers, so they stay active even with your phone turned off."
+      },
+      "safe": {
+        "q": "Is it safe to trade from my phone?",
+        "a": "Yes. The app uses biometrics, 2FA, TLS 1.3 encryption and withdrawal whitelists — the same standards as the web version."
+      }
+    }
+  },
+  "blog": {
+    "badge": "Insights, Analysis and Strategies",
+    "titlePrefix": "Bitradex",
+    "titleHighlight": "Blog",
+    "subtitle": "Premium content about crypto trading, AI, market analysis and the latest news from the crypto world.",
+    "home": "Home",
+    "blog": "Blog",
+    "all": "All",
+    "featured": "Featured",
+    "readFull": "Read the full article",
+    "latest": "Latest Articles",
+    "related": "Recommended articles",
+    "back": "Back to Blog",
+    "inThisArticle": "In this article",
+    "topic": "Topic",
+    "authorName": "Bitradex Research Desk",
+    "authorRole": "Market analysts and AI specialists",
+    "highlightLabel": "Highlight:",
+    "highlightText": "Bitradex combines institutional execution, audited security and the ARK Trading AI Bot in a single platform.",
+    "ctaTitle": "Ready to start trading?",
+    "ctaText": "Join millions of traders on Bitradex and activate the AI Bot in seconds.",
+    "ctaButton": "Create Free Account",
+    "categories": {
+      "guide": "Guide",
+      "aiTrading": "AI Trading",
+      "education": "Education",
+      "security": "Security",
+      "analysis": "Analysis",
+      "benefits": "Benefits"
+    },
+    "posts": {
+      "como-comecar-trading-cripto-2026": {
+        "title": "How to Start Crypto Trading in 2026: The Complete Guide",
+        "excerpt": "A definitive step-by-step guide for beginners who want to enter the crypto market with safety, strategy and the support of the Bitradex AI Bot.",
+        "date": "15 Jul 2026",
+        "readTime": "8 min",
+        "sections": [
+          {
+            "heading": "Why invest in crypto in 2026?",
+            "body": "The crypto market reached historic milestones in 2026, with large-scale institutional adoption, established ETFs and integration with traditional financial systems. Bitcoin, Ethereum and assets such as Solana and XRP are now part of diversified portfolios worldwide. Starting now means joining one of the biggest financial shifts of our era."
+          },
+          {
+            "heading": "Step 1: Choose a reliable exchange",
+            "body": "Bitradex offers registration in seconds, fast KYC, more than 500 trading pairs and competitive fees. Its infrastructure supports billions in daily volume and relies on cold storage, insurance and regulatory compliance across multiple jurisdictions."
+          },
+          {
+            "heading": "Step 2: Begin with spot trading",
+            "body": "For beginners, the spot market is the best starting point: you buy and sell crypto at the current price, without leverage. Start with small amounts, learn the interface and master basic analysis before moving to leveraged products."
+          },
+          {
+            "heading": "Step 3: Diversify with a strategy",
+            "body": "Never put everything into a single asset. A balanced allocation may include 50% Bitcoin, 30% Ethereum and 20% selected altcoins. Rebalance monthly to keep your strategy on track."
+          },
+          {
+            "heading": "Step 4: Automate with the Bitradex AI Bot",
+            "body": "The Bitradex AI Bot uses the ARK Trading model to run strategies 24/7, capturing opportunities humans cannot monitor. With a single click you put institutional-grade intelligence to work for you."
+          },
+          {
+            "heading": "Step 5: Keep learning",
+            "body": "Markets move fast. Follow our blog, join the community and test strategies in simulated environments before risking real capital. Trading success comes from continuous education."
+          }
+        ]
+      },
+      "ai-bot-bitradex-como-funciona": {
+        "title": "Bitradex AI Bot: How Artificial Intelligence Transforms Trading",
+        "excerpt": "Discover how the ARK Trading model analyses trillions of parameters to run profitable trades 24/7 in the crypto market.",
+        "date": "12 Jul 2026",
+        "readTime": "10 min",
+        "sections": [
+          {
+            "heading": "What is the Bitradex AI Bot?",
+            "body": "It is an automated trading system powered by the ARK Trading model, with more than a trillion parameters analysing market data in real time. It identifies patterns, executes optimised entries and exits and manages risk automatically."
+          },
+          {
+            "heading": "How does the ARK Trading architecture work?",
+            "body": "ARK combines deep neural networks with reinforcement learning, trained on decades of market data. It evaluates market sentiment, volume, volatility, cross-asset correlations and more than 200 technical indicators at the same time."
+          },
+          {
+            "heading": "Advantages of automated AI trading",
+            "body": "1) 24/7 operation without fatigue. 2) No emotional bias. 3) Millisecond execution speed. 4) Continuous backtesting. 5) Adaptive risk management. 6) Full transparency on every trade."
+          },
+          {
+            "heading": "How to start in 3 steps",
+            "body": "1) Create your Bitradex account. 2) Choose a strategy (conservative, moderate or aggressive). 3) Activate the bot with one click. It starts trading immediately and you follow results in real time on the dashboard."
+          },
+          {
+            "heading": "Security and transparency",
+            "body": "Every trade is recorded and visible in your dashboard. The bot never takes custody of your funds — it operates exclusively through the API inside your own account."
+          }
+        ]
+      },
+      "spot-vs-futures-qual-escolher": {
+        "title": "Spot vs Futures: Which Should You Choose on Bitradex?",
+        "excerpt": "Understand the differences between spot trading and perpetual futures, when to use each one and how to maximise your results.",
+        "date": "08 Jul 2026",
+        "readTime": "6 min",
+        "sections": [
+          {
+            "heading": "What is spot trading?",
+            "body": "In the spot market you buy and sell crypto at the current price and become the owner of the asset. It is the simplest and safest way to trade, ideal for long-term holders and beginners."
+          },
+          {
+            "heading": "What are perpetual futures?",
+            "body": "Derivative contracts that let you trade with leverage of up to 125x, both long and short. They have no expiry date, which makes them very popular in the crypto market."
+          },
+          {
+            "heading": "When to use spot",
+            "body": "Ideal for long-term accumulation, dollar cost averaging, portfolio diversification and anyone who prefers lower risk. You can never lose more than you invested."
+          },
+          {
+            "heading": "When to use futures",
+            "body": "Ideal for hedging positions, short-term speculation, riding strong trends with leverage, and experienced traders who know how to manage risk."
+          },
+          {
+            "heading": "Bitradex recommendation",
+            "body": "Beginners should start 100% in spot. Once you master technical analysis and risk management, allocate at most 10-20% of your capital to futures with low leverage (2x-5x)."
+          }
+        ]
+      },
+      "seguranca-carteira-cripto": {
+        "title": "Crypto Security: How to Protect Your Digital Assets",
+        "excerpt": "Security best practices, two-factor authentication, cold storage and how Bitradex protects billions in assets.",
+        "date": "03 Jul 2026",
+        "readTime": "7 min",
+        "sections": [
+          {
+            "heading": "Enable 2FA everywhere",
+            "body": "Use apps such as Google Authenticator or Authy — never SMS. 2FA cuts the risk of unauthorised access to your account by more than 99%."
+          },
+          {
+            "heading": "Strong, unique passwords",
+            "body": "Use a password manager (1Password, Bitwarden) to generate unique 20+ character passwords for every service. Never reuse passwords."
+          },
+          {
+            "heading": "Cold storage for large amounts",
+            "body": "Assets you will not touch for months belong in hardware wallets (Ledger, Trezor). Bitradex keeps 95% of funds in institutional cold storage."
+          },
+          {
+            "heading": "Watch out for phishing",
+            "body": "Always check the URL (bitradex.app). Never click links in suspicious emails. Bitradex will never ask for your password or seed phrase."
+          },
+          {
+            "heading": "Withdrawal address whitelist",
+            "body": "Turn this on in your settings so withdrawals can only go to pre-approved addresses, with a security delay."
+          }
+        ]
+      },
+      "analise-tecnica-basico-cripto": {
+        "title": "Technical Analysis for Crypto: From Zero to Advanced",
+        "excerpt": "Learn to read candles, support and resistance, RSI, MACD and other essential indicators in crypto trading.",
+        "date": "28 Jun 2026",
+        "readTime": "12 min",
+        "sections": [
+          {
+            "heading": "Candlesticks: the language of the market",
+            "body": "Each candle shows the open, close, high and low of a period. Patterns such as Doji, Hammer, Engulfing and Morning Star signal reversals and continuations."
+          },
+          {
+            "heading": "Support and resistance",
+            "body": "Levels where price has historically paused. Support is the floor; resistance is the ceiling. Breakouts on volume usually confirm directional moves."
+          },
+          {
+            "heading": "RSI (Relative Strength Index)",
+            "body": "A momentum indicator between 0 and 100. Above 70 is overbought; below 30 is oversold. Divergences between RSI and price are powerful signals."
+          },
+          {
+            "heading": "MACD (Moving Average Convergence Divergence)",
+            "body": "Shows the relationship between two moving averages. Crossovers of the MACD line and its signal line generate buy and sell signals; the histogram shows momentum strength."
+          },
+          {
+            "heading": "Fibonacci retracement",
+            "body": "A tool to identify correction levels (23.6%, 38.2%, 50%, 61.8%, 78.6%) within trends. Widely used to plan entries on pullbacks."
+          },
+          {
+            "heading": "Volume: the fuel of every move",
+            "body": "Moves without volume tend to fail. Always confirm breakouts and reversals with a significant increase in volume."
+          }
+        ]
+      },
+      "programa-vip-referral-bitradex": {
+        "title": "Bitradex VIP and Referral Programs: Maximise Your Benefits",
+        "excerpt": "Learn about the VIP tiers, referral commissions and how to scale your earnings on the Bitradex platform.",
+        "date": "22 Jun 2026",
+        "readTime": "5 min",
+        "sections": [
+          {
+            "heading": "An 8-tier VIP program",
+            "body": "From VIP 1 to VIP 8, the higher your trading volume, the lower your fees and the greater your benefits: a dedicated manager, priority withdrawals, premium APIs and early access to new products."
+          },
+          {
+            "heading": "Referral program",
+            "body": "Earn up to 40% lifetime commission on the trading fees of the users you refer. There is no cap on referrals and no minimum commission amount."
+          },
+          {
+            "heading": "How to scale your earnings",
+            "body": "Combine your own trading (using the AI Bot) with a network of referrals. Many Bitradex partners earn five to six figures per month in commissions alone."
+          },
+          {
+            "heading": "Get started now",
+            "body": "Create your account using the invite link and start with a welcome bonus and reduced fees for the first 30 days."
+          }
+        ]
+      }
+    }
   }
 }
