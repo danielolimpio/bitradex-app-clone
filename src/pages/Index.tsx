@@ -10,6 +10,7 @@ import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
 import CookieConsent from "@/components/CookieConsent";
+import ExitIntentPopup from "@/components/ExitIntentPopup";
 import SEO from "@/seo/SEO";
 
 const Index = () => {
@@ -30,6 +31,7 @@ const Index = () => {
       <ScrollToTop />
       <WhatsAppFloatingButton />
       <CookieConsent />
+      <ExitIntentPopup />
     </div>
   );
 };
