@@ -43,7 +43,7 @@ const AIBotSection = () => {
               {features.map(({ icon, key }) => (
                 <div key={key} className="flex items-start space-x-4 group">
                   <div className="w-12 h-12 flex items-center justify-center flex-shrink-0">
-                    <img src={icon} alt="" className="w-12 h-12 object-contain" />
+                    <img src={icon} alt={t(`aiBot.features.${key}.alt`)} loading="lazy" className="w-12 h-12 object-contain" />
                   </div>
                   <div className="space-y-2">
                     <h3 className="text-xl text-foreground group-hover:text-primary transition-colors duration-300 font-normal">
