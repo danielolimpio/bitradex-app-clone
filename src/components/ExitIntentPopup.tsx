@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { X, ShieldCheck, Lock, Sparkles } from "lucide-react";
 import cinematicBg from "@/assets/exit-popup/cinematic-bg.jpg";
-import binanceMark from "@/assets/exit-popup/binance.png";
-import bybitMark from "@/assets/exit-popup/bybit.png";
-import bitgetMark from "@/assets/exit-popup/bitget.png";
+import binanceAsset from "@/assets/exit-popup/binance.webp.asset.json";
+import bybitAsset from "@/assets/exit-popup/bybit.webp.asset.json";
+import bitgetAsset from "@/assets/exit-popup/bitget.webp.asset.json";
 import whatsappLogo from "@/assets/whatsapp-logo.svg";
 
 const WHATSAPP_URL =
@@ -13,9 +13,9 @@ const WHATSAPP_URL =
 const STORAGE_KEY = "exitIntentShown";
 
 const exchanges = [
-  { name: "Binance", logo: binanceMark, glow: "42 92% 50%" },
-  { name: "Bybit", logo: bybitMark, glow: "38 96% 50%" },
-  { name: "BitGet", logo: bitgetMark, glow: "178 100% 50%" },
+  { name: "Binance", logo: binanceAsset.url, glow: "42 92% 50%" },
+  { name: "Bybit", logo: bybitAsset.url, glow: "38 96% 50%" },
+  { name: "BitGet", logo: bitgetAsset.url, glow: "178 100% 50%" },
 ];
 
 const ExitIntentPopup = () => {
@@ -124,8 +124,8 @@ const ExitIntentPopup = () => {
                   src={ex.logo}
                   alt={`Logo ${ex.name}`}
                   loading="lazy"
-                  width={512}
-                  height={512}
+                  width={128}
+                  height={128}
                   className="h-7 w-7 object-contain drop-shadow-[0_0_10px_rgba(255,255,255,0.15)] sm:h-8 sm:w-8"
                 />
                 <span className="text-sm font-semibold tracking-tight sm:text-base">
