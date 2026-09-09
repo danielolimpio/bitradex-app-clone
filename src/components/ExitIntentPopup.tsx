@@ -123,7 +123,8 @@ const ExitIntentPopup = () => {
                 <img
                   src={ex.logo}
                   alt={`Logo ${ex.name}`}
-                  loading="lazy"
+                  loading="eager"
+                  decoding="async"
                   width={128}
                   height={128}
                   className="h-7 w-7 object-contain drop-shadow-[0_0_10px_rgba(255,255,255,0.15)] sm:h-8 sm:w-8"
