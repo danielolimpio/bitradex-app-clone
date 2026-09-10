@@ -86,6 +86,7 @@ const SEO = ({
   const orgJsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": `${SITE_URL}/#organization`,
     name: BRAND,
     legalName: "BITRADEX FINTECH LIMITED",
     url: SITE_URL,
