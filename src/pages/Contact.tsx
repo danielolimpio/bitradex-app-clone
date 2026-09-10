@@ -112,7 +112,7 @@ const Contact = () => {
               <h2 className="text-3xl font-bold mb-6">{t("contact.form.title")}</h2>
               <p className="text-muted-foreground mb-8">{t("contact.form.subtitle")}</p>
 
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label className="text-sm font-medium mb-2 block">{t("contact.form.firstName")}</label>
