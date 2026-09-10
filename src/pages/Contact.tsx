@@ -139,7 +139,7 @@ const Contact = () => {
                   <Textarea placeholder={t("contact.form.messagePlaceholder")} className="min-h-[150px]" />
                 </div>
 
-                <Button className="w-full bg-gradient-primary hover:shadow-button" onClick={(e) => e.preventDefault()}>
+                <Button type="submit" className="w-full bg-gradient-primary hover:shadow-button">
                   {t("contact.form.send")}
                 </Button>
               </form>
