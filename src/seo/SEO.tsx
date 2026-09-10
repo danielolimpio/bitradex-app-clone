@@ -110,12 +110,14 @@ const SEO = ({
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
     name: BRAND,
     url: SITE_URL,
+    publisher: { "@id": `${SITE_URL}/#organization` },
     inLanguage: locale.htmlLang,
     potentialAction: {
       "@type": "SearchAction",
-      target: `${SITE_URL}/?q={search_term_string}`,
+      target: `${SITE_URL}/faq?q={search_term_string}`,
       "query-input": "required name=search_term_string",
     },
   };
