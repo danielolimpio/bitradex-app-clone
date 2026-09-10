@@ -132,7 +132,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <label className="text-sm font-medium mb-2 block">{t("contact.form.lastName")}</label>
-                    <Input placeholder="Doe" />
+                    <Input name="lastName" placeholder="Doe" />
                   </div>
                 </div>
 
