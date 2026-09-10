@@ -128,7 +128,7 @@ const Contact = () => {
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label className="text-sm font-medium mb-2 block">{t("contact.form.firstName")}</label>
-                    <Input placeholder="John" />
+                    <Input name="firstName" required placeholder="John" />
                   </div>
                   <div>
                     <label className="text-sm font-medium mb-2 block">{t("contact.form.lastName")}</label>
