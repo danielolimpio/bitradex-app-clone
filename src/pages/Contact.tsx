@@ -37,6 +37,18 @@ const Contact = () => {
 
   const faqKeys = ["create", "fees", "secure", "withdraw"];
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    const text = [
+      `${t("contact.form.firstName")}: ${data.get("firstName") ?? ""} ${data.get("lastName") ?? ""}`,
+      `${t("contact.form.email")}: ${data.get("email") ?? ""}`,
+      `${t("contact.form.subject")}: ${data.get("subject") ?? ""}`,
+      `${t("contact.form.message")}: ${data.get("message") ?? ""}`,
+    ].join("\n");
+    window.open(`https://wa.me/5512982519116?text=${encodeURIComponent(text)}`, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <SEO breadcrumbs={[{ name: "Contact", path: "/contact" }]} />
