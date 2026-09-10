@@ -138,7 +138,7 @@ const Contact = () => {
 
                 <div>
                   <label className="text-sm font-medium mb-2 block">{t("contact.form.email")}</label>
-                  <Input type="email" placeholder="john.doe@example.com" />
+                  <Input type="email" name="email" required placeholder="john.doe@example.com" />
                 </div>
 
                 <div>
