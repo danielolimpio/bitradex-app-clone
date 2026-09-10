@@ -37,6 +37,18 @@ const Contact = () => {
 
   const faqKeys = ["create", "fees", "secure", "withdraw"];
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    const text = [
+      `${t("contact.form.firstName")}: ${data.get("firstName") ?? ""} ${data.get("lastName") ?? ""}`,
+      `${t("contact.form.email")}: ${data.get("email") ?? ""}`,
+      `${t("contact.form.subject")}: ${data.get("subject") ?? ""}`,
+      `${t("contact.form.message")}: ${data.get("message") ?? ""}`,
+    ].join("\n");
+    window.open(`https://wa.me/5512982519116?text=${encodeURIComponent(text)}`, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <SEO breadcrumbs={[{ name: "Contact", path: "/contact" }]} />
@@ -112,34 +124,34 @@ const Contact = () => {
               <h2 className="text-3xl font-bold mb-6">{t("contact.form.title")}</h2>
               <p className="text-muted-foreground mb-8">{t("contact.form.subtitle")}</p>
 
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label className="text-sm font-medium mb-2 block">{t("contact.form.firstName")}</label>
-                    <Input placeholder="John" />
+                    <Input name="firstName" required placeholder="John" />
                   </div>
                   <div>
                     <label className="text-sm font-medium mb-2 block">{t("contact.form.lastName")}</label>
-                    <Input placeholder="Doe" />
+                    <Input name="lastName" placeholder="Doe" />
                   </div>
                 </div>
 
                 <div>
                   <label className="text-sm font-medium mb-2 block">{t("contact.form.email")}</label>
-                  <Input type="email" placeholder="john.doe@example.com" />
+                  <Input type="email" name="email" required placeholder="john.doe@example.com" />
                 </div>
 
                 <div>
                   <label className="text-sm font-medium mb-2 block">{t("contact.form.subject")}</label>
-                  <Input placeholder={t("contact.form.subjectPlaceholder")} />
+                  <Input name="subject" placeholder={t("contact.form.subjectPlaceholder")} />
                 </div>
 
                 <div>
                   <label className="text-sm font-medium mb-2 block">{t("contact.form.message")}</label>
-                  <Textarea placeholder={t("contact.form.messagePlaceholder")} className="min-h-[150px]" />
+                  <Textarea name="message" required placeholder={t("contact.form.messagePlaceholder")} className="min-h-[150px]" />
                 </div>
 
-                <Button className="w-full bg-gradient-primary hover:shadow-button" onClick={(e) => e.preventDefault()}>
+                <Button type="submit" className="w-full bg-gradient-primary hover:shadow-button">
                   {t("contact.form.send")}
                 </Button>
               </form>

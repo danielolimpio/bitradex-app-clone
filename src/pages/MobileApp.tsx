@@ -33,7 +33,20 @@ const MobileApp = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO breadcrumbs={[{ name: "Mobile App", path: "/mobile-app" }]} />
+      <SEO
+        breadcrumbs={[{ name: "Mobile App", path: "/mobile-app" }]}
+        jsonLd={[
+          {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "Bitradex App",
+            operatingSystem: "iOS, Android",
+            applicationCategory: "FinanceApplication",
+            publisher: { "@id": "https://bitradex.app/#organization" },
+            offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+          },
+        ]}
+      />
       <Header />
       <main>
         <section className="relative overflow-hidden border-b border-border">
