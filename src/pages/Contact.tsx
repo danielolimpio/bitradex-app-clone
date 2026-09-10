@@ -148,7 +148,7 @@ const Contact = () => {
 
                 <div>
                   <label className="text-sm font-medium mb-2 block">{t("contact.form.message")}</label>
-                  <Textarea placeholder={t("contact.form.messagePlaceholder")} className="min-h-[150px]" />
+                  <Textarea name="message" required placeholder={t("contact.form.messagePlaceholder")} className="min-h-[150px]" />
                 </div>
 
                 <Button type="submit" className="w-full bg-gradient-primary hover:shadow-button">
