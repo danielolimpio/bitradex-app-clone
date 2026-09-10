@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Mail, MapPin, Phone, Twitter, Facebook, Instagram, Linkedin, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import logo from "@/assets/bitradex-logo.png";
+import logo from "@/assets/bitradex-logo.webp";
 
 const Footer = () => {
   const { t } = useTranslation();

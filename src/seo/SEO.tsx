@@ -30,7 +30,7 @@ interface SEOProps {
   jsonLd?: Record<string, unknown>[];
 }
 
-const DEFAULT_IMAGE = "https://bitradex.app/assets/bitradex-logo-CS93K5c3.png";
+const DEFAULT_IMAGE = "https://bitradex.app/favicon.png";
 
 
 /**

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { X, ShieldCheck, Lock, Sparkles } from "lucide-react";
-import cinematicBg from "@/assets/exit-popup/cinematic-bg.jpg";
+import cinematicBg from "@/assets/exit-popup/cinematic-bg.webp";
 import binanceAsset from "@/assets/exit-popup/binance.webp.asset.json";
 import bybitAsset from "@/assets/exit-popup/bybit.webp.asset.json";
 import bitgetAsset from "@/assets/exit-popup/bitget.webp.asset.json";

@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
-import aiIcon from "@/assets/why-choose/ai.png";
-import securityIcon from "@/assets/why-choose/security.png";
-import globalIcon from "@/assets/why-choose/global.png";
-import fastIcon from "@/assets/why-choose/fast.png";
+import aiIcon from "@/assets/why-choose/ai.webp";
+import securityIcon from "@/assets/why-choose/security.webp";
+import globalIcon from "@/assets/why-choose/global.webp";
+import fastIcon from "@/assets/why-choose/fast.webp";
 
 const WhyChooseSection = () => {
   const { t } = useTranslation();

@@ -2,10 +2,10 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import videoBotSrc from "@/assets/video_aibot.mp4";
-import oneClickIcon from "@/assets/ai-bot/one-click.png";
-import aiStrategyIcon from "@/assets/ai-bot/ai-strategy.png";
-import transparentIcon from "@/assets/ai-bot/transparent.png";
-import riskIcon from "@/assets/ai-bot/risk.png";
+import oneClickIcon from "@/assets/ai-bot/one-click.webp";
+import aiStrategyIcon from "@/assets/ai-bot/ai-strategy.webp";
+import transparentIcon from "@/assets/ai-bot/transparent.webp";
+import riskIcon from "@/assets/ai-bot/risk.webp";
 
 const AIBotSection = () => {
   const { t } = useTranslation();

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
-import logo from "@/assets/bitradex-logo.png";
+import logo from "@/assets/bitradex-logo.webp";
 import LanguageSelector from "@/components/LanguageSelector";
 
 const SUPPORTED_LANGS = ["pt", "es", "de", "id", "th", "ko", "ru", "ja", "ms", "zh"];
