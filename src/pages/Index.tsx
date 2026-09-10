@@ -16,7 +16,21 @@ import SEO from "@/seo/SEO";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <SEO />
+      <SEO
+        jsonLd={[
+          {
+            "@context": "https://schema.org",
+            "@type": "FinancialService",
+            "@id": "https://bitradex.app/#service",
+            name: "Bitradex AI Trading",
+            provider: { "@id": "https://bitradex.app/#organization" },
+            areaServed: "Worldwide",
+            serviceType:
+              "AI-powered crypto exchange, spot trading, futures trading, AI trading bot",
+            url: "https://bitradex.app",
+          },
+        ]}
+      />
       <Header />
       <main>
         <HeroSection />
