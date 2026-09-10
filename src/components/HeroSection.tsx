@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Play, Trophy } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import heroImage from "@/assets/david-villa-hero.png";
+import heroImage from "@/assets/david-villa-hero.webp";
 
 const HeroSection = () => {
   const { t } = useTranslation();

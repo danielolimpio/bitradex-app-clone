@@ -1,16 +1,16 @@
 import { useTranslation } from "react-i18next";
-import aveAiLogo from "@/assets/partners/ave-ai.png";
-import binanceLogo from "@/assets/partners/binance.png";
-import tokenPocketLogo from "@/assets/partners/token-pocket.png";
-import trustpilotLogo from "@/assets/partners/trustpilot.png";
-import bitgetLogo from "@/assets/partners/bitget.png";
-import coinmarketcapLogo from "@/assets/partners/coinmarketcap.png";
-import tracxnLogo from "@/assets/partners/tracxn.png";
-import odailyLogo from "@/assets/partners/odaily.png";
-import chainalysisLogo from "@/assets/partners/chainalysis.png";
-import certikLogo from "@/assets/partners/certik.png";
-import chaincatcherLogo from "@/assets/partners/chaincatcher.png";
-import rootdataLogo from "@/assets/partners/rootdata.png";
+import aveAiLogo from "@/assets/partners/ave-ai.webp";
+import binanceLogo from "@/assets/partners/binance.webp";
+import tokenPocketLogo from "@/assets/partners/token-pocket.webp";
+import trustpilotLogo from "@/assets/partners/trustpilot.webp";
+import bitgetLogo from "@/assets/partners/bitget.webp";
+import coinmarketcapLogo from "@/assets/partners/coinmarketcap.webp";
+import tracxnLogo from "@/assets/partners/tracxn.webp";
+import odailyLogo from "@/assets/partners/odaily.webp";
+import chainalysisLogo from "@/assets/partners/chainalysis.webp";
+import certikLogo from "@/assets/partners/certik.webp";
+import chaincatcherLogo from "@/assets/partners/chaincatcher.webp";
+import rootdataLogo from "@/assets/partners/rootdata.webp";
 
 const rowOne = [
   { name: "Trustpilot", logo: trustpilotLogo },

@@ -1,10 +1,10 @@
 import { TrendingUp, TrendingDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import bitcoinLogo from "@/assets/crypto/bitcoin.png";
-import ethereumLogo from "@/assets/crypto/ethereum.png";
-import bnbLogo from "@/assets/crypto/bnb.png";
-import solanaLogo from "@/assets/crypto/solana.png";
+import bitcoinLogo from "@/assets/crypto/bitcoin.webp";
+import ethereumLogo from "@/assets/crypto/ethereum.webp";
+import bnbLogo from "@/assets/crypto/bnb.webp";
+import solanaLogo from "@/assets/crypto/solana.webp";
 
 const MarketOverview = () => {
   const { t } = useTranslation();
