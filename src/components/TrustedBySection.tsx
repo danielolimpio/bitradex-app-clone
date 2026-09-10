@@ -51,7 +51,7 @@ const LogoRow = ({
           >
             <img
               src={partner.logo}
-              alt={partner.name}
+              alt={partner.name} loading="lazy" decoding="async"
               className="max-h-16 md:max-h-20 w-auto object-contain opacity-90"
             />
           </div>
